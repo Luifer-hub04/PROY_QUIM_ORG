@@ -1,0 +1,636 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "es-ES",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "discourageImplicitMeasures": true,
+    "sourceQueryCulture": "es-CO",
+    "tables": [
+      {
+        "name": "Compuestos",
+        "lineageTag": "4b72bb04-0f78-4c7e-92e7-87076ccdc906",
+        "columns": [
+          {
+            "name": "Compuesto",
+            "dataType": "string",
+            "sourceColumn": "Compuesto",
+            "summarizeBy": "none",
+            "lineageTag": "93b518ae-a828-4187-be2d-210339dd76c1"
+          },
+          {
+            "name": "CAS",
+            "dataType": "string",
+            "sourceColumn": "CAS",
+            "summarizeBy": "none",
+            "lineageTag": "1f09bf5a-5fb8-4d41-8982-22577db74039"
+          },
+          {
+            "name": "Familia",
+            "dataType": "string",
+            "sourceColumn": "Familia",
+            "summarizeBy": "none",
+            "lineageTag": "31779395-bf9a-4f1d-92c9-907c1fe518b3"
+          },
+          {
+            "name": "Grupo funcional",
+            "dataType": "string",
+            "sourceColumn": "Grupo funcional",
+            "summarizeBy": "none",
+            "lineageTag": "0982ff13-3be6-45dc-a7ba-317d266c826d"
+          },
+          {
+            "name": "Puentes de H",
+            "dataType": "string",
+            "sourceColumn": "Puentes de H",
+            "summarizeBy": "none",
+            "lineageTag": "295e1872-1dad-4ee4-94a7-83481fa116a0"
+          },
+          {
+            "name": "Asignado",
+            "dataType": "string",
+            "sourceColumn": "Asignado",
+            "summarizeBy": "none",
+            "lineageTag": "4c170ebc-d625-46d8-bb71-3ff3058a7e7a"
+          },
+          {
+            "name": "Estado a 25 °C",
+            "dataType": "string",
+            "sourceColumn": "Estado a 25 °C",
+            "summarizeBy": "none",
+            "lineageTag": "5e54d01a-6f9f-434d-bc58-1feaf71664af"
+          },
+          {
+            "name": "Rango PM",
+            "dataType": "string",
+            "sourceColumn": "Rango PM",
+            "summarizeBy": "none",
+            "lineageTag": "36ef37af-2deb-44c7-8fb8-dafd1aa5b4b4",
+            "sortByColumn": "Rango PM Orden"
+          },
+          {
+            "name": "Rango PM Orden",
+            "dataType": "int64",
+            "sourceColumn": "Rango PM Orden",
+            "summarizeBy": "none",
+            "lineageTag": "6f984d7a-fad0-4e46-a567-b2765845a158",
+            "isHidden": true
+          },
+          {
+            "name": "PM (g/mol)",
+            "dataType": "double",
+            "sourceColumn": "PM (g/mol)",
+            "summarizeBy": "none",
+            "lineageTag": "dd2c35ca-15d1-41f7-8fee-757036e33380",
+            "formatString": "0.00"
+          },
+          {
+            "name": "pf (°C)",
+            "dataType": "double",
+            "sourceColumn": "pf (°C)",
+            "summarizeBy": "none",
+            "lineageTag": "73b60ddf-db6a-4c24-b561-c3478f7467fb",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Peb (°C)",
+            "dataType": "double",
+            "sourceColumn": "Peb (°C)",
+            "summarizeBy": "none",
+            "lineageTag": "53dde279-c394-4c00-b8ee-dc2469d490a6",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Densidad (g/cm3)",
+            "dataType": "double",
+            "sourceColumn": "Densidad (g/cm3)",
+            "summarizeBy": "none",
+            "lineageTag": "4579e4f1-3711-42aa-ad68-188ce27f36e6",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Solubilidad (g/L)",
+            "dataType": "double",
+            "sourceColumn": "Solubilidad (g/L)",
+            "summarizeBy": "none",
+            "lineageTag": "b2da5fa0-19c5-4bd3-b519-08f4cd21349f",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Solubilidad (texto)",
+            "dataType": "string",
+            "sourceColumn": "Solubilidad (texto)",
+            "summarizeBy": "none",
+            "lineageTag": "bb09da38-d08c-47f2-80bb-afeafed889b3"
+          },
+          {
+            "name": "pKa",
+            "dataType": "double",
+            "sourceColumn": "pKa",
+            "summarizeBy": "none",
+            "lineageTag": "b1d14499-793b-4ac8-9702-bfd81c552d26",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Momento dipolar (D)",
+            "dataType": "double",
+            "sourceColumn": "Momento dipolar (D)",
+            "summarizeBy": "none",
+            "lineageTag": "f185564e-fe27-4e81-8dd0-b5613ef931c6",
+            "formatString": "0.00"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Compuestos",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Excel.Workbook(File.Contents(RutaDatos), null, true),",
+                "    Datos = Origen{[Item=\"Compuestos\",Kind=\"Table\"]}[Data],",
+                "    TiposCambiados = Table.TransformColumnTypes(Datos, {{\"Compuesto\", type text}, {\"CAS\", type text}, {\"Familia\", type text}, {\"Grupo_funcional\", type text}, {\"Puentes_H\", type text}, {\"Asignado\", type text}, {\"Estado_25C\", type text}, {\"Rango_PM\", type text}, {\"Rango_PM_Orden\", Int64.Type}, {\"PM_g_mol\", type number}, {\"pf_C\", type number}, {\"Peb_C\", type number}, {\"Densidad_g_cm3\", type number}, {\"Solubilidad_g_L\", type number}, {\"Solubilidad_texto\", type text}, {\"pKa\", type number}, {\"Momento_dipolar_D\", type number}}),",
+                "    FilasValidas = Table.SelectRows(TiposCambiados, each [Compuesto] <> null and [Compuesto] <> \"\"),",
+                "    ColumnasRenombradas = Table.RenameColumns(FilasValidas, {{\"Grupo_funcional\", \"Grupo funcional\"}, {\"Puentes_H\", \"Puentes de H\"}, {\"Estado_25C\", \"Estado a 25 °C\"}, {\"Rango_PM\", \"Rango PM\"}, {\"Rango_PM_Orden\", \"Rango PM Orden\"}, {\"PM_g_mol\", \"PM (g/mol)\"}, {\"pf_C\", \"pf (°C)\"}, {\"Peb_C\", \"Peb (°C)\"}, {\"Densidad_g_cm3\", \"Densidad (g/cm3)\"}, {\"Solubilidad_g_L\", \"Solubilidad (g/L)\"}, {\"Solubilidad_texto\", \"Solubilidad (texto)\"}, {\"Momento_dipolar_D\", \"Momento dipolar (D)\"}})",
+                "in",
+                "    ColumnasRenombradas"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total compuestos",
+            "expression": [
+              "DISTINCTCOUNT ( Compuestos[Compuesto] )"
+            ],
+            "formatString": "0",
+            "description": "Número de compuestos distintos en el filtro actual.",
+            "lineageTag": "a5e3e439-a382-4bba-a5bc-7791722c4e1f"
+          },
+          {
+            "name": "PM promedio (g/mol)",
+            "expression": [
+              "AVERAGE ( Compuestos[PM (g/mol)] )"
+            ],
+            "formatString": "0.00",
+            "description": "Peso molecular promedio.",
+            "lineageTag": "fb2d57d6-0793-4248-b984-3906f66c5fd1"
+          },
+          {
+            "name": "Peb promedio (°C)",
+            "expression": [
+              "AVERAGE ( Compuestos[Peb (°C)] )"
+            ],
+            "formatString": "0.0",
+            "description": "Punto de ebullición promedio.",
+            "lineageTag": "cd29aea4-dc5c-4ce0-abc2-4be1fa78dbcf"
+          },
+          {
+            "name": "pf promedio (°C)",
+            "expression": [
+              "AVERAGE ( Compuestos[pf (°C)] )"
+            ],
+            "formatString": "0.0",
+            "description": "Punto de fusión promedio.",
+            "lineageTag": "dfed6605-2b9b-4754-845c-33c84094e195"
+          },
+          {
+            "name": "Densidad promedio (g/cm3)",
+            "expression": [
+              "AVERAGE ( Compuestos[Densidad (g/cm3)] )"
+            ],
+            "formatString": "0.000",
+            "description": "Densidad promedio.",
+            "lineageTag": "f1853c8f-224b-4325-8243-732041d18904"
+          },
+          {
+            "name": "Solubilidad promedio (g/L)",
+            "expression": [
+              "AVERAGE ( Compuestos[Solubilidad (g/L)] )"
+            ],
+            "formatString": "0.0",
+            "description": "Solubilidad en agua promedio.",
+            "lineageTag": "440c6623-1b37-464c-89aa-2c91bd4d0e01"
+          },
+          {
+            "name": "pKa promedio",
+            "expression": [
+              "AVERAGE ( Compuestos[pKa] )"
+            ],
+            "formatString": "0.00",
+            "description": "pKa promedio.",
+            "lineageTag": "3da77990-3c28-48e7-b950-7853c0df318e"
+          },
+          {
+            "name": "Momento dipolar promedio (D)",
+            "expression": [
+              "AVERAGE ( Compuestos[Momento dipolar (D)] )"
+            ],
+            "formatString": "0.00",
+            "description": "Momento dipolar promedio en Debye.",
+            "lineageTag": "1525da69-afb8-4b5c-90be-0c42f88f89bb"
+          },
+          {
+            "name": "Rango Peb (°C)",
+            "expression": [
+              "MAX ( Compuestos[Peb (°C)] ) - MIN ( Compuestos[Peb (°C)] )"
+            ],
+            "formatString": "0.0",
+            "description": "Diferencia entre el mayor y el menor punto de ebullición.",
+            "lineageTag": "1f70d230-54ed-4d64-a1ec-46801c5a8322"
+          },
+          {
+            "name": "r PM vs Peb",
+            "expression": [
+              "VAR T =",
+              "    FILTER (",
+              "        ADDCOLUMNS (",
+              "            VALUES ( Compuestos[Compuesto] ),",
+              "            \"@x\", CALCULATE ( AVERAGE ( Compuestos[PM (g/mol)] ) ),",
+              "            \"@y\", CALCULATE ( AVERAGE ( Compuestos[Peb (°C)] ) )",
+              "        ),",
+              "        NOT ISBLANK ( [@x] ) && NOT ISBLANK ( [@y] )",
+              "    )",
+              "VAR n = COUNTROWS ( T )",
+              "VAR mx = AVERAGEX ( T, [@x] )",
+              "VAR my = AVERAGEX ( T, [@y] )",
+              "VAR cov = SUMX ( T, ( [@x] - mx ) * ( [@y] - my ) )",
+              "VAR sx = SQRT ( SUMX ( T, ( [@x] - mx ) ^ 2 ) )",
+              "VAR sy = SQRT ( SUMX ( T, ( [@y] - my ) ^ 2 ) )",
+              "RETURN",
+              "    IF ( n >= 3, DIVIDE ( cov, sx * sy ) )"
+            ],
+            "formatString": "0.00",
+            "description": "Coeficiente de correlación de Pearson entre PM (g/mol) y Peb (°C) (mínimo 3 compuestos con ambos datos).",
+            "lineageTag": "d12b00b3-9378-4fc4-8f3a-f03d76371ede"
+          },
+          {
+            "name": "r PM vs pf",
+            "expression": [
+              "VAR T =",
+              "    FILTER (",
+              "        ADDCOLUMNS (",
+              "            VALUES ( Compuestos[Compuesto] ),",
+              "            \"@x\", CALCULATE ( AVERAGE ( Compuestos[PM (g/mol)] ) ),",
+              "            \"@y\", CALCULATE ( AVERAGE ( Compuestos[pf (°C)] ) )",
+              "        ),",
+              "        NOT ISBLANK ( [@x] ) && NOT ISBLANK ( [@y] )",
+              "    )",
+              "VAR n = COUNTROWS ( T )",
+              "VAR mx = AVERAGEX ( T, [@x] )",
+              "VAR my = AVERAGEX ( T, [@y] )",
+              "VAR cov = SUMX ( T, ( [@x] - mx ) * ( [@y] - my ) )",
+              "VAR sx = SQRT ( SUMX ( T, ( [@x] - mx ) ^ 2 ) )",
+              "VAR sy = SQRT ( SUMX ( T, ( [@y] - my ) ^ 2 ) )",
+              "RETURN",
+              "    IF ( n >= 3, DIVIDE ( cov, sx * sy ) )"
+            ],
+            "formatString": "0.00",
+            "description": "Coeficiente de correlación de Pearson entre PM (g/mol) y pf (°C) (mínimo 3 compuestos con ambos datos).",
+            "lineageTag": "ea53a1c6-e386-4927-aa90-3e499c9e42cd"
+          },
+          {
+            "name": "r Momento dipolar vs Peb",
+            "expression": [
+              "VAR T =",
+              "    FILTER (",
+              "        ADDCOLUMNS (",
+              "            VALUES ( Compuestos[Compuesto] ),",
+              "            \"@x\", CALCULATE ( AVERAGE ( Compuestos[Momento dipolar (D)] ) ),",
+              "            \"@y\", CALCULATE ( AVERAGE ( Compuestos[Peb (°C)] ) )",
+              "        ),",
+              "        NOT ISBLANK ( [@x] ) && NOT ISBLANK ( [@y] )",
+              "    )",
+              "VAR n = COUNTROWS ( T )",
+              "VAR mx = AVERAGEX ( T, [@x] )",
+              "VAR my = AVERAGEX ( T, [@y] )",
+              "VAR cov = SUMX ( T, ( [@x] - mx ) * ( [@y] - my ) )",
+              "VAR sx = SQRT ( SUMX ( T, ( [@x] - mx ) ^ 2 ) )",
+              "VAR sy = SQRT ( SUMX ( T, ( [@y] - my ) ^ 2 ) )",
+              "RETURN",
+              "    IF ( n >= 3, DIVIDE ( cov, sx * sy ) )"
+            ],
+            "formatString": "0.00",
+            "description": "Coeficiente de correlación de Pearson entre Momento dipolar (D) y Peb (°C) (mínimo 3 compuestos con ambos datos).",
+            "lineageTag": "d0268bcf-b998-47fc-97ba-96a2677a011a"
+          },
+          {
+            "name": "r Densidad vs Solubilidad",
+            "expression": [
+              "VAR T =",
+              "    FILTER (",
+              "        ADDCOLUMNS (",
+              "            VALUES ( Compuestos[Compuesto] ),",
+              "            \"@x\", CALCULATE ( AVERAGE ( Compuestos[Densidad (g/cm3)] ) ),",
+              "            \"@y\", CALCULATE ( AVERAGE ( Compuestos[Solubilidad (g/L)] ) )",
+              "        ),",
+              "        NOT ISBLANK ( [@x] ) && NOT ISBLANK ( [@y] )",
+              "    )",
+              "VAR n = COUNTROWS ( T )",
+              "VAR mx = AVERAGEX ( T, [@x] )",
+              "VAR my = AVERAGEX ( T, [@y] )",
+              "VAR cov = SUMX ( T, ( [@x] - mx ) * ( [@y] - my ) )",
+              "VAR sx = SQRT ( SUMX ( T, ( [@x] - mx ) ^ 2 ) )",
+              "VAR sy = SQRT ( SUMX ( T, ( [@y] - my ) ^ 2 ) )",
+              "RETURN",
+              "    IF ( n >= 3, DIVIDE ( cov, sx * sy ) )"
+            ],
+            "formatString": "0.00",
+            "description": "Coeficiente de correlación de Pearson entre Densidad (g/cm3) y Solubilidad (g/L) (mínimo 3 compuestos con ambos datos).",
+            "lineageTag": "6e7db11a-0550-44fc-8c12-3c49e30b44f2"
+          }
+        ]
+      },
+      {
+        "name": "Reacciones",
+        "lineageTag": "28d6c875-e50b-4700-8ed4-8b75d626e4d8",
+        "columns": [
+          {
+            "name": "ID Reacción",
+            "dataType": "int64",
+            "sourceColumn": "ID Reacción",
+            "summarizeBy": "none",
+            "lineageTag": "e0771f2d-3a66-452a-b365-872972f3165f",
+            "isHidden": true
+          },
+          {
+            "name": "CAS reacción",
+            "dataType": "string",
+            "sourceColumn": "CAS reacción",
+            "summarizeBy": "none",
+            "lineageTag": "9644bcce-2294-4df3-ad00-f6d7838b76d4"
+          },
+          {
+            "name": "Nombre reacción",
+            "dataType": "string",
+            "sourceColumn": "Nombre reacción",
+            "summarizeBy": "none",
+            "lineageTag": "b7076b88-4943-4e52-ab6c-aa802c005eeb"
+          },
+          {
+            "name": "Código tipo",
+            "dataType": "string",
+            "sourceColumn": "Código tipo",
+            "summarizeBy": "none",
+            "lineageTag": "8d136f92-3709-4d5f-9043-b6dc080bff1d",
+            "isHidden": true
+          },
+          {
+            "name": "Compuesto",
+            "dataType": "string",
+            "sourceColumn": "Compuesto",
+            "summarizeBy": "none",
+            "lineageTag": "5bbe07b8-8300-4d7f-a0b5-e2ce4d878d9e"
+          },
+          {
+            "name": "Reactivo 2",
+            "dataType": "string",
+            "sourceColumn": "Reactivo 2",
+            "summarizeBy": "none",
+            "lineageTag": "9b81780c-b778-4ad0-9adf-26e17b64a226"
+          },
+          {
+            "name": "Producto",
+            "dataType": "string",
+            "sourceColumn": "Producto",
+            "summarizeBy": "none",
+            "lineageTag": "4f32ec94-836c-4021-80aa-eddf94311ac9"
+          },
+          {
+            "name": "PM producto (g/mol)",
+            "dataType": "double",
+            "sourceColumn": "PM producto (g/mol)",
+            "summarizeBy": "none",
+            "lineageTag": "67578f8e-51c1-4fbc-a3f3-4d32b677cbc1",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Peb producto (°C)",
+            "dataType": "double",
+            "sourceColumn": "Peb producto (°C)",
+            "summarizeBy": "none",
+            "lineageTag": "a3d6c7c3-cbfc-459f-bdc0-5d83f6d7475f",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Catalizador",
+            "dataType": "string",
+            "sourceColumn": "Catalizador",
+            "summarizeBy": "none",
+            "lineageTag": "08e0fcfd-a2eb-41fd-b50c-1e3024d960f1"
+          },
+          {
+            "name": "Solvente",
+            "dataType": "string",
+            "sourceColumn": "Solvente",
+            "summarizeBy": "none",
+            "lineageTag": "810208f0-72ec-41e5-93c1-ec789db535b0"
+          },
+          {
+            "name": "Medio",
+            "dataType": "string",
+            "sourceColumn": "Medio",
+            "summarizeBy": "none",
+            "lineageTag": "8b14ef87-3cd3-4684-9c16-e9d652b6213a"
+          },
+          {
+            "name": "Condiciones",
+            "dataType": "string",
+            "sourceColumn": "Condiciones",
+            "summarizeBy": "none",
+            "lineageTag": "c6877b2d-eecb-421c-a1b4-f5a5a15f3752"
+          },
+          {
+            "name": "Tiempo (h)",
+            "dataType": "double",
+            "sourceColumn": "Tiempo (h)",
+            "summarizeBy": "none",
+            "lineageTag": "0d4f1f23-a4c4-4328-856a-1e81bf97e3ec",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Temperatura (°C)",
+            "dataType": "double",
+            "sourceColumn": "Temperatura (°C)",
+            "summarizeBy": "none",
+            "lineageTag": "1d684983-59f5-40c5-ab5b-753014449805",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Usa catalizador",
+            "dataType": "string",
+            "sourceColumn": "Usa catalizador",
+            "summarizeBy": "none",
+            "lineageTag": "89809c43-478f-4e5c-8cc1-b0eff76c3c71"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Reacciones",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Excel.Workbook(File.Contents(RutaDatos), null, true),",
+                "    Datos = Origen{[Item=\"Reacciones\",Kind=\"Table\"]}[Data],",
+                "    TiposCambiados = Table.TransformColumnTypes(Datos, {{\"ID_Reaccion\", Int64.Type}, {\"CAS_reaccion\", type text}, {\"Nombre_reaccion\", type text}, {\"Tipo_reaccion\", type text}, {\"Compuesto\", type text}, {\"Reactivo_2\", type text}, {\"Producto\", type text}, {\"PM_producto\", type number}, {\"Peb_producto_C\", type number}, {\"Catalizador\", type text}, {\"Solvente\", type text}, {\"Medio\", type text}, {\"Condiciones\", type text}, {\"Tiempo_h\", type number}, {\"Temperatura_C\", type number}, {\"Usa_catalizador\", type text}}),",
+                "    FilasValidas = Table.SelectRows(TiposCambiados, each [ID_Reaccion] <> null and [ID_Reaccion] <> \"\"),",
+                "    ColumnasRenombradas = Table.RenameColumns(FilasValidas, {{\"ID_Reaccion\", \"ID Reacción\"}, {\"CAS_reaccion\", \"CAS reacción\"}, {\"Nombre_reaccion\", \"Nombre reacción\"}, {\"Tipo_reaccion\", \"Código tipo\"}, {\"Reactivo_2\", \"Reactivo 2\"}, {\"PM_producto\", \"PM producto (g/mol)\"}, {\"Peb_producto_C\", \"Peb producto (°C)\"}, {\"Tiempo_h\", \"Tiempo (h)\"}, {\"Temperatura_C\", \"Temperatura (°C)\"}, {\"Usa_catalizador\", \"Usa catalizador\"}})",
+                "in",
+                "    ColumnasRenombradas"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total reacciones",
+            "expression": [
+              "COUNTROWS ( Reacciones )"
+            ],
+            "formatString": "0",
+            "description": "Número de reacciones en el filtro actual.",
+            "lineageTag": "b0c0072a-554f-46e7-96d3-7374d403577a"
+          },
+          {
+            "name": "% con catalizador",
+            "expression": [
+              "DIVIDE ( CALCULATE ( COUNTROWS ( Reacciones ), Reacciones[Usa catalizador] = \"Sí\" ), COUNTROWS ( Reacciones ) )"
+            ],
+            "formatString": "0.0%",
+            "description": "Porcentaje de reacciones que usan catalizador.",
+            "lineageTag": "48680540-7d27-4e9f-8874-722c0c96f998"
+          },
+          {
+            "name": "Tiempo medio (h)",
+            "expression": [
+              "AVERAGE ( Reacciones[Tiempo (h)] )"
+            ],
+            "formatString": "0.0",
+            "description": "Tiempo de reacción promedio en horas.",
+            "lineageTag": "2c57160c-c228-4011-9951-e37b2daee523"
+          },
+          {
+            "name": "Temperatura media (°C)",
+            "expression": [
+              "AVERAGE ( Reacciones[Temperatura (°C)] )"
+            ],
+            "formatString": "0.0",
+            "description": "Temperatura de reacción promedio (TA = 25 °C).",
+            "lineageTag": "d73f5f9d-de88-43e6-bf8d-64bd896eb801"
+          },
+          {
+            "name": "Δ PM producto - reactivo",
+            "expression": [
+              "AVERAGEX (",
+              "    FILTER (",
+              "        Reacciones,",
+              "        NOT ISBLANK ( Reacciones[PM producto (g/mol)] )",
+              "            && NOT ISBLANK ( RELATED ( Compuestos[PM (g/mol)] ) )",
+              "    ),",
+              "    Reacciones[PM producto (g/mol)] - RELATED ( Compuestos[PM (g/mol)] )",
+              ")"
+            ],
+            "formatString": "0.0",
+            "description": "Aumento promedio de peso molecular del producto respecto al reactivo principal.",
+            "lineageTag": "13b2bf81-415b-4802-a7d4-5acf3234e209"
+          }
+        ]
+      },
+      {
+        "name": "TiposReaccion",
+        "lineageTag": "37a5716e-dd42-42c4-9ca2-670167aabb76",
+        "columns": [
+          {
+            "name": "Código",
+            "dataType": "string",
+            "sourceColumn": "Código",
+            "summarizeBy": "none",
+            "lineageTag": "93790f8b-febc-463c-8dd8-a24e9df0f7bf",
+            "isHidden": true
+          },
+          {
+            "name": "Tipo de reacción",
+            "dataType": "string",
+            "sourceColumn": "Tipo de reacción",
+            "summarizeBy": "none",
+            "lineageTag": "a9b143e1-be13-4047-9722-e1d017e3ed81"
+          },
+          {
+            "name": "Descripción",
+            "dataType": "string",
+            "sourceColumn": "Descripción",
+            "summarizeBy": "none",
+            "lineageTag": "355e052e-7fa6-4912-ad09-19f926b80567"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "TiposReaccion",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Excel.Workbook(File.Contents(RutaDatos), null, true),",
+                "    Datos = Origen{[Item=\"TiposReaccion\",Kind=\"Table\"]}[Data],",
+                "    TiposCambiados = Table.TransformColumnTypes(Datos, {{\"Codigo\", type text}, {\"Tipo_reaccion_nombre\", type text}, {\"Descripcion\", type text}}),",
+                "    FilasValidas = Table.SelectRows(TiposCambiados, each [Codigo] <> null and [Codigo] <> \"\"),",
+                "    ColumnasRenombradas = Table.RenameColumns(FilasValidas, {{\"Codigo\", \"Código\"}, {\"Tipo_reaccion_nombre\", \"Tipo de reacción\"}, {\"Descripcion\", \"Descripción\"}})",
+                "in",
+                "    ColumnasRenombradas"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "9231d4fb-700d-435d-a8fa-c5caa8516752",
+        "fromTable": "Reacciones",
+        "fromColumn": "Compuesto",
+        "toTable": "Compuestos",
+        "toColumn": "Compuesto",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "c5de0793-ee3c-448e-83f6-ad364d9b933c",
+        "fromTable": "Reacciones",
+        "fromColumn": "Código tipo",
+        "toTable": "TiposReaccion",
+        "toColumn": "Código"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "RutaDatos",
+        "kind": "m",
+        "lineageTag": "69fab834-78a0-40cb-965e-daf15c3587a0",
+        "expression": "\"C:\\Users\\manue\\Documents\\JOB\\Datos\\datos_modelo_powerbi.xlsx\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"RutaDatos\", \"Compuestos\", \"Reacciones\", \"TiposReaccion\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

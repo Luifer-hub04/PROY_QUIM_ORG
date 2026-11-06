@@ -1,0 +1,18 @@
+{
+  "name": "Tema Química Orgánica",
+  "dataColors": [
+    "#1B9E77",
+    "#D95F02",
+    "#7570B3",
+    "#E7298A",
+    "#66A61E",
+    "#E6AB02",
+    "#A6761D",
+    "#1F78B4",
+    "#666666",
+    "#B2DF8A"
+  ],
+  "tableAccent": "#1B9E77",
+  "background": "#FFFFFF",
+  "foreground": "#1F3B57"
+}

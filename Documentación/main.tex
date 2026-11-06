@@ -1,0 +1,180 @@
+% =====================================================================
+%  ARCHIVO MAESTRO DEL INFORME -- Proyecto Final de Química Orgánica
+%  Plantilla base: Journal of Computational Science and Applications (JCSA)
+%  (plantilla oficial suministrada por el docente)
+%
+%  Estructura modular:
+%     main.tex                 -> preámbulo, título, resumen, unión de partes
+%     Sara/sara.tex            -> Introducción, Marco Teórico, Tabla de datos
+%     Valentina/valentina.tex  -> Metodología, Análisis Gráfico, Conclusiones
+%     references.bib           -> bibliografía compartida (BibLaTeX + Biber)
+%     imagenes/                -> figuras exportadas desde Google Colab
+%
+%  Compilación: pdflatex -> biber -> pdflatex -> pdflatex
+% =====================================================================
+\documentclass[twoside,twocolumn,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{abstract}
+\usepackage{graphicx}
+\graphicspath{{imagenes/}}
+\usepackage{threeparttable}
+\usepackage{titlesec}
+\usepackage{ragged2e}  % Provides the justifying command
+\usepackage{amssymb}   % For additional symbols
+\usepackage{parskip}   % Automatically handles paragraph spacing
+\usepackage{amsmath}   % For advanced math environments
+\usepackage{newtxtext} % Times New Roman font
+\usepackage{booktabs}  % For improved table appearance
+\usepackage{array}     % For customizing table columns
+\usepackage{siunitx}   % Unidades químicas (g/mol, °C, g/cm^3)
+\sisetup{output-decimal-marker={,}}
+\usepackage[spanish,es-tabla]{babel} % es-tabla: "Tabla" en vez de "Cuadro"
+\usepackage[
+	backend=biber,
+	style=chem-acs, 	% Aplica el estilo compacto de revistas científicas
+	articletitle=false,
+	maxnames=4,
+	minnames=1
+]{biblatex}
+\usepackage[version=4]{mhchem} % Notación química: \ce{CH3NH2}
+\addbibresource{references.bib}
+\setcounter{page}{1}
+
+% Define custom column types for better alignment and spacing
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Left aligned column
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}   % Center aligned column
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}  % Right aligned column
+
+\usepackage[font=footnotesize, labelfont=bf, justification=raggedright, format=plain]{caption}
+
+\captionsetup[table]{
+    labelsep=period,
+    justification=raggedright
+}
+
+\captionsetup[figure]{
+    labelsep=period,
+    justification=raggedright
+}
+
+% Set page margins
+\geometry{
+    letterpaper,
+    left=0.8in,
+    right=0.8in,
+    top=1in,
+    bottom=1in
+}
+
+% Increase space between columns
+\setlength{\columnsep}{20pt}
+
+% Define the centred abstract heading
+\renewcommand{\abstractname}{\hspace{1.3em}\textbf{Resumen}}
+
+\titleformat{\section}{\large\bfseries\uppercase}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries\flushleft}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\itshape\flushleft}{\thesubsubsection}{1em}{}
+
+% Set font sizes for abstract
+\renewcommand{\abstractnamefont}{\normalfont\fontsize{14}{20}\bfseries}
+\renewcommand{\absnamepos}{flushleft}
+\renewcommand{\abstracttextfont}{\normalfont\fontsize{11}{13}\selectfont}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
+% Set up header and footer styles
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CO]{\small Propiedades fisicoquímicas de aminas y amidas}
+\fancyhead[CE]{\small Proyecto de Química Orgánica (2026)}
+\fancyfoot[C]{\thepage}
+
+% First page custom header/footer
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyhead[LO]{\small Ingeniería Ambiental, FAMARENA-UD}
+  \fancyhead[RO]{\small QUIMORG 2026-III}
+  \fancyfoot[L]{\footnotesize Impreso: \today \\\textsuperscript{*}Autor de correspondencia: Nombre Completo \textless correo@udistrital.edu.co\textgreater}
+  \fancyfoot[R]{\footnotesize \copyright\ 2026 por los Autores. Publicado para proyecto final,\\\textsuperscript{*} bajo protección de difusión }
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% ---------------------------------------------------------------------
+%  TÍTULO Y AUTORES  (editar nombres completos)
+% ---------------------------------------------------------------------
+\title{\fontsize{16}{20}\selectfont\textbf{Relación estructura--propiedad en aminas y amidas: análisis estadístico de propiedades fisicoquímicas obtenidas de CAS-SciFinder}}
+\author{
+    \fontsize{12}{14}\selectfont
+    Sara [Apellido]\textsuperscript{1*}, Valentina [Apellido]\textsuperscript{1}, [Tercer integrante]\textsuperscript{1}\\[1ex]
+    \fontsize{12}{14}\selectfont
+    \textsuperscript{1}Ingeniería Ambiental, Facultad del Medio Ambiente y Recursos Naturales,\\
+    Universidad Distrital Francisco José de Caldas, Bogotá, Colombia
+}
+\date{}
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\vspace{-0.5cm}
+\raggedright
+
+{\fontsize{11}{13}\selectfont{Artículo de Investigación}}
+\vspace{-0.8cm}
+
+\maketitle
+
+\thispagestyle{firstpage}
+\begin{abstract}
+\fontsize{11}{13}\selectfont
+\vspace{1em}
+\justifying
+% TODO (grupo): redactar el resumen al final, en un solo párrafo de 150--250 palabras:
+% objetivo, fuente de datos (CAS-SciFinder), herramientas (Python, Power BI),
+% resultados principales (correlaciones) y conclusión principal.
+\textit{[Resumen pendiente: un párrafo de 150--250 palabras con objetivo, metodología, resultados principales y conclusión.]}
+
+\vspace{-0.1cm}
+\noindent\textbf{Palabras clave:}
+ aminas, amidas, puentes de hidrógeno, punto de ebullición, correlación de Spearman.
+
+\end{abstract}
+
+\vspace{1cm}
+\end{@twocolumnfalse}
+]
+
+% ---------------------------------------------------------------------
+%  PARTE DE SARA: Introducción, Marco Teórico y Tabla de datos
+% ---------------------------------------------------------------------
+\input{Sara/sara}
+
+% ---------------------------------------------------------------------
+%  PARTE DE VALENTINA: Metodología, Análisis Gráfico y Conclusiones
+% ---------------------------------------------------------------------
+\input{Valentina/valentina}
+
+% ---------------------------------------------------------------------
+%  DECLARACIÓN Y BIBLIOGRAFÍA (compartidas)
+% ---------------------------------------------------------------------
+\section{Declaración}
+\fontsize{11}{13}\selectfont
+
+\textbf{Conflicto de intereses:} Los autores declaran no tener conflictos de intereses.
+
+\textbf{Contribución de los autores:}
+Sara [Apellido]: introducción, marco teórico y tabla de datos.
+Valentina [Apellido]: metodología, análisis gráfico y conclusiones.
+[Tercer integrante]: recolección en CAS-SciFinder, dashboard de Power BI y repositorio GitHub.
+
+\printbibliography[title={Referencias}]
+
+\end{document}

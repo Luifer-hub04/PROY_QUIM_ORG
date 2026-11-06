@@ -1,0 +1,73 @@
+% =====================================================================
+%  PARTE DE SARA  --  se incluye desde main.tex con \input{Sara/sara}
+%  Contenido: Introducción, Marco Teórico y Tabla de datos
+%
+%  Reglas para editar sin romper la compilación:
+%   * NO escribir \documentclass, \begin{document} ni \end{document} aquí.
+%   * Citas: agregar la referencia en ../references.bib y citar con \cite{clave}.
+%   * Fórmulas químicas: \ce{CH3NH2}, \ce{(CH3)2NH}, \ce{CH3CONH2}.
+%   * Unidades: \si{\gram\per\mole}, \si{\degreeCelsius}, \si{\gram\per\centi\metre\cubed}.
+% =====================================================================
+
+\section{Introducción}
+\fontsize{12}{14}\selectfont
+% TODO (Sara): pegar aquí la redacción de la introducción.
+% Sugerencia de hilo argumentativo:
+%  1. Importancia de los compuestos nitrogenados (aminas y amidas) en química
+%     orgánica, biología y en el ambiente.
+%  2. Problema: cómo la estructura (grado de sustitución del N, grupo carbonilo,
+%     capacidad de formar puentes de hidrógeno) determina las propiedades físicas.
+%  3. Objetivo del trabajo: relacionar estadísticamente propiedades obtenidas en
+%     CAS-SciFinder (PM, pf, P.eb, densidad, pKa, momento dipolar, solubilidad).
+\textit{[Redacción de la introducción pendiente.]}
+
+Los datos de partida se obtuvieron de CAS-SciFinder \cite{1_Su2022}.
+% (Reemplazar esta cita de ejemplo por la referencia real de CAS-SciFinder.)
+
+\section{Marco Teórico}
+\fontsize{12}{14}\selectfont
+% TODO (Sara): pegar aquí la redacción del marco teórico.
+% Temas sugeridos:
+%  * Aminas primarias, secundarias y terciarias: \ce{CH3NH2}, \ce{(CH3)2NH}, \ce{(CH3)3N}.
+%  * Amidas: acetamida, N-metilacetamida, N,N-dimetilacetamida, urea.
+%  * Fuerzas intermoleculares: puentes de hidrógeno N--H$\cdots$N y N--H$\cdots$O,
+%    dipolo--dipolo y dispersión de London.
+%  * Basicidad (pKa del ácido conjugado) y efecto de la resonancia en amidas.
+
+\subsection{Fuerzas intermoleculares}
+\textit{[Redacción pendiente.]}
+
+\subsection{Basicidad y resonancia}
+\textit{[Redacción pendiente.]}
+
+\subsection{Tabla de datos de propiedades químicas}
+\label{sec:tabla}
+% TODO (Sara): completar la tabla con los valores definitivos del Excel
+% (Datos/datos_power_bi.xlsx). Una fila por compuesto; usar "--" si falta el dato.
+La Tabla~\ref{tab:propiedades} resume las propiedades fisicoquímicas de los
+compuestos estudiados, consolidadas desde CAS-SciFinder.
+
+\begin{table}[htbp]
+	\centering
+	\captionsetup{width=\columnwidth, justification=justified}
+	\caption{Propiedades fisicoquímicas de los compuestos estudiados.}
+	\label{tab:propiedades}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{lccccc}
+			\toprule
+			\textbf{Compuesto} & \textbf{PM} & \textbf{pf} & \textbf{P.eb} & \textbf{$\rho$} & \textbf{pKa} \\
+			 & (\si{\gram\per\mole}) & (\si{\degreeCelsius}) & (\si{\degreeCelsius}) & (\si{\gram\per\centi\metre\cubed}) & \\
+			\midrule
+			Metilamina            & -- & -- & -- & -- & -- \\
+			Dimetilamina          & -- & -- & -- & -- & -- \\
+			Trimetilamina         & -- & -- & -- & -- & -- \\
+			N-metiletanamina      & -- & -- & -- & -- & -- \\
+			Bencidina             & -- & -- & -- & -- & -- \\
+			Acetamida             & -- & -- & -- & -- & -- \\
+			N-metilacetamida      & -- & -- & -- & -- & -- \\
+			N,N-dimetilacetamida  & -- & -- & -- & -- & -- \\
+			Urea                  & -- & -- & -- & -- & -- \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}

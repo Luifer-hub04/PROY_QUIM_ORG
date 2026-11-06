@@ -1,0 +1,37 @@
+# --- Archivos auxiliares de LaTeX (se regeneran al compilar) ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.run.xml
+*-blx.bib
+
+# --- Python / Colab ---
+__pycache__/
+.ipynb_checkpoints/
+filtered_compounds.csv
+
+# --- Power BI (archivos temporales y caché local del proyecto .pbip) ---
+*.pbix.bak
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+~$*
+
+# --- Sistema ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- Archivos de contexto locales (instrucciones y rúbrica, no son entregables) ---
+/instrucciones_del_proyecto.md
+/maestro_de_estructura_y_evaluacion.md
+/rubrica_envalucion.md

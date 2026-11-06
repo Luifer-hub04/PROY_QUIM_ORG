@@ -1,0 +1,415 @@
+{
+  "config": "{\"version\": \"5.61\", \"themeCollection\": {\"baseTheme\": {\"name\": \"CY24SU10\", \"version\": \"5.61\", \"type\": 2}, \"customTheme\": {\"name\": \"TemaQuimicaOrganica.json\", \"version\": \"5.61\", \"type\": 1}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useStylableVisualContainerHeader\": true, \"exportDataMode\": 1}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "name": "SharedResources",
+        "type": 2,
+        "disabled": false,
+        "items": [
+          {
+            "type": 202,
+            "path": "BaseThemes/CY24SU10.json",
+            "name": "CY24SU10"
+          }
+        ]
+      }
+    },
+    {
+      "resourcePackage": {
+        "name": "RegisteredResources",
+        "type": 1,
+        "disabled": false,
+        "items": [
+          {
+            "type": 201,
+            "path": "TemaQuimicaOrganica.json",
+            "name": "TemaQuimicaOrganica.json"
+          }
+        ]
+      }
+    }
+  ],
+  "filters": "[{\"name\": \"FiltroAsignados\", \"expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"Compuestos\"}}, \"Property\": \"Asignado\"}}, \"filter\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Where\": [{\"Condition\": {\"In\": {\"Expressions\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Asignado\"}}], \"Values\": [[{\"Literal\": {\"Value\": \"'Sí'\"}}]]}}}]}, \"type\": \"Categorical\", \"howCreated\": 1, \"objects\": {\"general\": [{\"properties\": {\"isInvertedSelectionMode\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}]",
+  "sections": [
+    {
+      "name": "ReportSection01panorama",
+      "displayName": "1. Panorama",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 0,
+      "config": "{\"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#F4F6F9'\"}}}}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}]}}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 5,
+          "z": 100,
+          "width": 1260,
+          "height": 75,
+          "config": "{\"name\": \"t001e23ff6d178e5\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 5, \"z\": 100, \"width\": 1260, \"height\": 75}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Aminas y amidas: relación estructura–propiedad\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\"}}]}, {\"textRuns\": [{\"value\": \"Haz clic en cualquier punto, barra o sector: todo el tablero se filtra. Filtro del informe: compuestos asignados (panel Filtros).\", \"textStyle\": {\"fontSize\": \"11pt\", \"color\": \"#5A6B7B\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 90,
+          "z": 200,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v00268a6fec2e0cf\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 90, \"z\": 200, \"width\": 200, \"height\": 149, \"tabOrder\": 200}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Familia\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Familia\"}, \"Name\": \"Compuestos.Familia\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Familia química'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 247,
+          "z": 300,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v00393940db3860f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 247, \"z\": 300, \"width\": 200, \"height\": 149, \"tabOrder\": 300}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Grupo funcional\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Grupo funcional\"}, \"Name\": \"Compuestos.Grupo funcional\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Grupo funcional'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 404,
+          "z": 400,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v00481e7735b2c64\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 404, \"z\": 400, \"width\": 200, \"height\": 149, \"tabOrder\": 400}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Puentes de H\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Puentes de H\"}, \"Name\": \"Compuestos.Puentes de H\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Puentes de hidrógeno'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 561,
+          "z": 500,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v005fa936aba1d93\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 561, \"z\": 500, \"width\": 200, \"height\": 149, \"tabOrder\": 500}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"TiposReaccion.Tipo de reacción\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"TiposReaccion\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"Tipo de reacción\"}, \"Name\": \"TiposReaccion.Tipo de reacción\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tipo de reacción'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 90,
+          "z": 600,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v006081d2c7717d3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 90, \"z\": 600, \"width\": 255, \"height\": 85, \"tabOrder\": 600}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Total compuestos\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Total compuestos\"}, \"Name\": \"Compuestos.Total compuestos\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Compuestos'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 485,
+          "y": 90,
+          "z": 700,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v007a0da65741f85\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 485, \"y\": 90, \"z\": 700, \"width\": 255, \"height\": 85, \"tabOrder\": 700}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Total reacciones\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Total reacciones\"}, \"Name\": \"Reacciones.Total reacciones\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reacciones'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 90,
+          "z": 800,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v008080be88efa4d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 90, \"z\": 800, \"width\": 255, \"height\": 85, \"tabOrder\": 800}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.PM promedio (g/mol)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"PM promedio (g/mol)\"}, \"Name\": \"Compuestos.PM promedio (g/mol)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'PM promedio (g/mol)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1015,
+          "y": 90,
+          "z": 900,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v0091a4193694eab\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1015, \"y\": 90, \"z\": 900, \"width\": 255, \"height\": 85, \"tabOrder\": 900}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Peb promedio (°C)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Peb promedio (°C)\"}, \"Name\": \"Compuestos.Peb promedio (°C)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Peb promedio (°C)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 185,
+          "z": 1000,
+          "width": 520,
+          "height": 265,
+          "config": "{\"name\": \"v0105825af8abaed\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 185, \"z\": 1000, \"width\": 520, \"height\": 265, \"tabOrder\": 1000}}], \"singleVisual\": {\"visualType\": \"scatterChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Compuestos.Compuesto\"}], \"Series\": [{\"queryRef\": \"Compuestos.Grupo funcional\"}], \"X\": [{\"queryRef\": \"Compuestos.PM promedio (g/mol)\"}], \"Y\": [{\"queryRef\": \"Compuestos.Peb promedio (°C)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Grupo funcional\"}, \"Name\": \"Compuestos.Grupo funcional\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"PM promedio (g/mol)\"}, \"Name\": \"Compuestos.PM promedio (g/mol)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Peb promedio (°C)\"}, \"Name\": \"Compuestos.Peb promedio (°C)\"}]}, \"objects\": {\"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"dataPoint\": [{\"properties\": {\"showAllDataPoints\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"bubbles\": [{\"properties\": {\"bubbleSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"trend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"displayName\": {\"expr\": {\"Literal\": {\"Value\": \"'Tendencia lineal'\"}}}, \"lineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#C0392B'\"}}}}}, \"combineSeries\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Right'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"start\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}, \"end\": {\"expr\": {\"Literal\": {\"Value\": \"210D\"}}}}}], \"valueAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"start\": {\"expr\": {\"Literal\": {\"Value\": \"-70D\"}}}, \"end\": {\"expr\": {\"Literal\": {\"Value\": \"470D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Peso molecular vs punto de ebullición'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 185,
+          "z": 1100,
+          "width": 520,
+          "height": 265,
+          "config": "{\"name\": \"v011668c331526b2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 185, \"z\": 1100, \"width\": 520, \"height\": 265, \"tabOrder\": 1100}}], \"singleVisual\": {\"visualType\": \"scatterChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Compuestos.Compuesto\"}], \"Series\": [{\"queryRef\": \"Compuestos.Grupo funcional\"}], \"X\": [{\"queryRef\": \"Compuestos.Densidad promedio (g/cm3)\"}], \"Y\": [{\"queryRef\": \"Compuestos.Solubilidad promedio (g/L)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Grupo funcional\"}, \"Name\": \"Compuestos.Grupo funcional\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Densidad promedio (g/cm3)\"}, \"Name\": \"Compuestos.Densidad promedio (g/cm3)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Solubilidad promedio (g/L)\"}, \"Name\": \"Compuestos.Solubilidad promedio (g/L)\"}]}, \"objects\": {\"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"dataPoint\": [{\"properties\": {\"showAllDataPoints\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"bubbles\": [{\"properties\": {\"bubbleSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"trend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"displayName\": {\"expr\": {\"Literal\": {\"Value\": \"'Tendencia lineal'\"}}}, \"lineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#C0392B'\"}}}}}, \"combineSeries\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Right'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"start\": {\"expr\": {\"Literal\": {\"Value\": \"0.5D\"}}}, \"end\": {\"expr\": {\"Literal\": {\"Value\": \"1.45D\"}}}}}], \"valueAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"start\": {\"expr\": {\"Literal\": {\"Value\": \"-150D\"}}}, \"end\": {\"expr\": {\"Literal\": {\"Value\": \"1650D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Densidad vs solubilidad en agua'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 460,
+          "z": 1200,
+          "width": 520,
+          "height": 250,
+          "config": "{\"name\": \"v012d3be576a85a1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 460, \"z\": 1200, \"width\": 520, \"height\": 250, \"tabOrder\": 1200}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Compuestos.Grupo funcional\"}], \"Y\": [{\"queryRef\": \"Compuestos.pf promedio (°C)\"}, {\"queryRef\": \"Compuestos.Peb promedio (°C)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Grupo funcional\"}, \"Name\": \"Compuestos.Grupo funcional\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"pf promedio (°C)\"}, \"Name\": \"Compuestos.pf promedio (°C)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Peb promedio (°C)\"}, \"Name\": \"Compuestos.Peb promedio (°C)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"categoryAxis\": [{\"properties\": {\"maxMarginFactor\": {\"expr\": {\"Literal\": {\"Value\": \"45D\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Puntos de fusión y ebullición por grupo funcional'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 460,
+          "z": 1300,
+          "width": 520,
+          "height": 250,
+          "config": "{\"name\": \"v0138674dc39d6e5\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 460, \"z\": 1300, \"width\": 520, \"height\": 250, \"tabOrder\": 1300}}], \"singleVisual\": {\"visualType\": \"donutChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"TiposReaccion.Tipo de reacción\"}], \"Y\": [{\"queryRef\": \"Reacciones.Total reacciones\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"TiposReaccion\", \"Type\": 0}, {\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"Tipo de reacción\"}, \"Name\": \"TiposReaccion.Tipo de reacción\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Total reacciones\"}, \"Name\": \"Reacciones.Total reacciones\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"labelStyle\": {\"expr\": {\"Literal\": {\"Value\": \"'Percent of total'\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Right'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reacciones por mecanismo'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "name": "ReportSection02propiedades",
+      "displayName": "2. Propiedades",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 1,
+      "config": "{\"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#F4F6F9'\"}}}}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}]}}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 5,
+          "z": 1400,
+          "width": 1260,
+          "height": 75,
+          "config": "{\"name\": \"t014ef9db7cb3470\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 5, \"z\": 1400, \"width\": 1260, \"height\": 75}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Propiedades fisicoquímicas y fuerzas intermoleculares\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\"}}]}, {\"textRuns\": [{\"value\": \"Coeficientes r de Pearson recalculados en vivo según los filtros: |r| cercano a 1 indica relación lineal fuerte.\", \"textStyle\": {\"fontSize\": \"11pt\", \"color\": \"#5A6B7B\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 90,
+          "z": 1500,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v015f62bd6ebca75\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 90, \"z\": 1500, \"width\": 200, \"height\": 149, \"tabOrder\": 1500}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Compuesto\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Compuesto'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 247,
+          "z": 1600,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v0163d4dbebe529d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 247, \"z\": 1600, \"width\": 200, \"height\": 149, \"tabOrder\": 1600}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Familia\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Familia\"}, \"Name\": \"Compuestos.Familia\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Familia química'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 404,
+          "z": 1700,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v017a6f811cc7e76\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 404, \"z\": 1700, \"width\": 200, \"height\": 149, \"tabOrder\": 1700}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Estado a 25 °C\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Estado a 25 °C\"}, \"Name\": \"Compuestos.Estado a 25 °C\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Estado a 25 °C'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 561,
+          "z": 1800,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v018093800bddb51\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 561, \"z\": 1800, \"width\": 200, \"height\": 149, \"tabOrder\": 1800}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Rango PM\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Rango PM\"}, \"Name\": \"Compuestos.Rango PM\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Rango de PM (g/mol)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 90,
+          "z": 1900,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v019cd13a7eae183\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 90, \"z\": 1900, \"width\": 255, \"height\": 85, \"tabOrder\": 1900}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.r PM vs Peb\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"r PM vs Peb\"}, \"Name\": \"Compuestos.r PM vs Peb\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'r  PM vs Peb'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 485,
+          "y": 90,
+          "z": 2000,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v020d70c0e4f6103\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 485, \"y\": 90, \"z\": 2000, \"width\": 255, \"height\": 85, \"tabOrder\": 2000}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.r PM vs pf\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"r PM vs pf\"}, \"Name\": \"Compuestos.r PM vs pf\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'r  PM vs pf'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 90,
+          "z": 2100,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v02168155c352ac1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 90, \"z\": 2100, \"width\": 255, \"height\": 85, \"tabOrder\": 2100}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.r Momento dipolar vs Peb\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"r Momento dipolar vs Peb\"}, \"Name\": \"Compuestos.r Momento dipolar vs Peb\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'r  Momento dipolar vs Peb'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1015,
+          "y": 90,
+          "z": 2200,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v0221c33801a160f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1015, \"y\": 90, \"z\": 2200, \"width\": 255, \"height\": 85, \"tabOrder\": 2200}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.r Densidad vs Solubilidad\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"r Densidad vs Solubilidad\"}, \"Name\": \"Compuestos.r Densidad vs Solubilidad\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'r  Densidad vs Solubilidad'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 185,
+          "z": 2300,
+          "width": 520,
+          "height": 265,
+          "config": "{\"name\": \"v023c705da856e0e\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 185, \"z\": 2300, \"width\": 520, \"height\": 265, \"tabOrder\": 2300}}], \"singleVisual\": {\"visualType\": \"scatterChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Compuestos.Compuesto\"}], \"Series\": [{\"queryRef\": \"Compuestos.Grupo funcional\"}], \"X\": [{\"queryRef\": \"Compuestos.Momento dipolar promedio (D)\"}], \"Y\": [{\"queryRef\": \"Compuestos.Peb promedio (°C)\"}], \"Size\": [{\"queryRef\": \"Compuestos.PM promedio (g/mol)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Grupo funcional\"}, \"Name\": \"Compuestos.Grupo funcional\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Momento dipolar promedio (D)\"}, \"Name\": \"Compuestos.Momento dipolar promedio (D)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Peb promedio (°C)\"}, \"Name\": \"Compuestos.Peb promedio (°C)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"PM promedio (g/mol)\"}, \"Name\": \"Compuestos.PM promedio (g/mol)\"}]}, \"objects\": {\"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"dataPoint\": [{\"properties\": {\"showAllDataPoints\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"bubbles\": [{\"properties\": {\"bubbleSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"trend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"displayName\": {\"expr\": {\"Literal\": {\"Value\": \"'Tendencia lineal'\"}}}, \"lineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#C0392B'\"}}}}}, \"combineSeries\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Right'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"start\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}, \"end\": {\"expr\": {\"Literal\": {\"Value\": \"5D\"}}}}}], \"valueAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"start\": {\"expr\": {\"Literal\": {\"Value\": \"-80D\"}}}, \"end\": {\"expr\": {\"Literal\": {\"Value\": \"520D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Momento dipolar vs punto de ebullición (tamaño = PM)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 185,
+          "z": 2400,
+          "width": 520,
+          "height": 265,
+          "config": "{\"name\": \"v0248c353c6577bb\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 185, \"z\": 2400, \"width\": 520, \"height\": 265, \"tabOrder\": 2400}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Compuestos.Compuesto\"}], \"Y\": [{\"queryRef\": \"Compuestos.pKa promedio\"}], \"Series\": [{\"queryRef\": \"Compuestos.Familia\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"pKa promedio\"}, \"Name\": \"Compuestos.pKa promedio\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Familia\"}, \"Name\": \"Compuestos.Familia\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"categoryAxis\": [{\"properties\": {\"maxMarginFactor\": {\"expr\": {\"Literal\": {\"Value\": \"45D\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'pKa por compuesto (basicidad / acidez)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 460,
+          "z": 2500,
+          "width": 1050,
+          "height": 250,
+          "config": "{\"name\": \"v025bb32f29c3851\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 460, \"z\": 2500, \"width\": 1050, \"height\": 250, \"tabOrder\": 2500}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Compuesto\"}, {\"queryRef\": \"Compuestos.Grupo funcional\"}, {\"queryRef\": \"Compuestos.Puentes de H\"}, {\"queryRef\": \"Compuestos.PM (g/mol)\"}, {\"queryRef\": \"Compuestos.pf (°C)\"}, {\"queryRef\": \"Compuestos.Peb (°C)\"}, {\"queryRef\": \"Compuestos.Densidad (g/cm3)\"}, {\"queryRef\": \"Compuestos.Solubilidad (g/L)\"}, {\"queryRef\": \"Compuestos.pKa\"}, {\"queryRef\": \"Compuestos.Momento dipolar (D)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Grupo funcional\"}, \"Name\": \"Compuestos.Grupo funcional\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Puentes de H\"}, \"Name\": \"Compuestos.Puentes de H\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"PM (g/mol)\"}, \"Name\": \"Compuestos.PM (g/mol)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"pf (°C)\"}, \"Name\": \"Compuestos.pf (°C)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Peb (°C)\"}, \"Name\": \"Compuestos.Peb (°C)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Densidad (g/cm3)\"}, \"Name\": \"Compuestos.Densidad (g/cm3)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Solubilidad (g/L)\"}, \"Name\": \"Compuestos.Solubilidad (g/L)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"pKa\"}, \"Name\": \"Compuestos.pKa\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Momento dipolar (D)\"}, \"Name\": \"Compuestos.Momento dipolar (D)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tabla de propiedades (CAS-SciFinder, datos limpios)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "name": "ReportSection03reacciones",
+      "displayName": "3. Reacciones",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 2,
+      "config": "{\"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#F4F6F9'\"}}}}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}]}}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 5,
+          "z": 2600,
+          "width": 1260,
+          "height": 75,
+          "config": "{\"name\": \"t02677e42f559291\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 5, \"z\": 2600, \"width\": 1260, \"height\": 75}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Reactividad: mecanismos, condiciones y productos\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\"}}]}, {\"textRuns\": [{\"value\": \"Cómo reaccionan los compuestos asignados: tipo de mecanismo, solvente, catalizador y cambio de peso molecular.\", \"textStyle\": {\"fontSize\": \"11pt\", \"color\": \"#5A6B7B\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 90,
+          "z": 2700,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v02716d3e8da44b2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 90, \"z\": 2700, \"width\": 200, \"height\": 149, \"tabOrder\": 2700}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"TiposReaccion.Tipo de reacción\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"TiposReaccion\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"Tipo de reacción\"}, \"Name\": \"TiposReaccion.Tipo de reacción\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tipo de reacción'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 247,
+          "z": 2800,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v028d32d3cbe11a3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 247, \"z\": 2800, \"width\": 200, \"height\": 149, \"tabOrder\": 2800}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Compuestos.Compuesto\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Compuesto (reactivo)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 404,
+          "z": 2900,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v029e03c7229f6c6\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 404, \"z\": 2900, \"width\": 200, \"height\": 149, \"tabOrder\": 2900}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Usa catalizador\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Usa catalizador\"}, \"Name\": \"Reacciones.Usa catalizador\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Usa catalizador'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 561,
+          "z": 3000,
+          "width": 200,
+          "height": 149,
+          "config": "{\"name\": \"v030b3e16f89971a\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 561, \"z\": 3000, \"width\": 200, \"height\": 149, \"tabOrder\": 3000}}], \"singleVisual\": {\"visualType\": \"slicer\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Medio\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Medio\"}, \"Name\": \"Reacciones.Medio\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Medio'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}}}], \"selection\": [{\"properties\": {\"selectAllCheckboxEnabled\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 90,
+          "z": 3100,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v03126b17104e717\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 90, \"z\": 3100, \"width\": 255, \"height\": 85, \"tabOrder\": 3100}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Total reacciones\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Total reacciones\"}, \"Name\": \"Reacciones.Total reacciones\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reacciones'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 485,
+          "y": 90,
+          "z": 3200,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v03210b9adbd8abc\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 485, \"y\": 90, \"z\": 3200, \"width\": 255, \"height\": 85, \"tabOrder\": 3200}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.% con catalizador\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"% con catalizador\"}, \"Name\": \"Reacciones.% con catalizador\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'% con catalizador'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 90,
+          "z": 3300,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v033cce515d21575\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 90, \"z\": 3300, \"width\": 255, \"height\": 85, \"tabOrder\": 3300}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Tiempo medio (h)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Tiempo medio (h)\"}, \"Name\": \"Reacciones.Tiempo medio (h)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tiempo medio (h)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1015,
+          "y": 90,
+          "z": 3400,
+          "width": 255,
+          "height": 85,
+          "config": "{\"name\": \"v03480d265dbc2de\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1015, \"y\": 90, \"z\": 3400, \"width\": 255, \"height\": 85, \"tabOrder\": 3400}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Temperatura media (°C)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Temperatura media (°C)\"}, \"Name\": \"Reacciones.Temperatura media (°C)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Temperatura media (°C)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 185,
+          "z": 3500,
+          "width": 520,
+          "height": 265,
+          "config": "{\"name\": \"v035cd1e01bd6f2b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 185, \"z\": 3500, \"width\": 520, \"height\": 265, \"tabOrder\": 3500}}], \"singleVisual\": {\"visualType\": \"barChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"TiposReaccion.Tipo de reacción\"}], \"Y\": [{\"queryRef\": \"Reacciones.Total reacciones\"}], \"Series\": [{\"queryRef\": \"Compuestos.Familia\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"TiposReaccion\", \"Type\": 0}, {\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}, {\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"Tipo de reacción\"}, \"Name\": \"TiposReaccion.Tipo de reacción\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Total reacciones\"}, \"Name\": \"Reacciones.Total reacciones\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Familia\"}, \"Name\": \"Compuestos.Familia\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"categoryAxis\": [{\"properties\": {\"maxMarginFactor\": {\"expr\": {\"Literal\": {\"Value\": \"45D\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reacciones por mecanismo y familia'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 185,
+          "z": 3600,
+          "width": 520,
+          "height": 265,
+          "config": "{\"name\": \"v03629772b44f635\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 185, \"z\": 3600, \"width\": 520, \"height\": 265, \"tabOrder\": 3600}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Reacciones.Solvente\"}], \"Y\": [{\"queryRef\": \"Reacciones.Total reacciones\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Solvente\"}, \"Name\": \"Reacciones.Solvente\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Total reacciones\"}, \"Name\": \"Reacciones.Total reacciones\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"categoryAxis\": [{\"properties\": {\"maxMarginFactor\": {\"expr\": {\"Literal\": {\"Value\": \"45D\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Solventes más usados'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 220,
+          "y": 460,
+          "z": 3700,
+          "width": 520,
+          "height": 250,
+          "config": "{\"name\": \"v037c3669a281000\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 220, \"y\": 460, \"z\": 3700, \"width\": 520, \"height\": 250, \"tabOrder\": 3700}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Category\": [{\"queryRef\": \"Compuestos.Compuesto\"}], \"Y\": [{\"queryRef\": \"Reacciones.Δ PM producto - reactivo\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"Compuestos\", \"Type\": 0}, {\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Compuestos.Compuesto\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Δ PM producto - reactivo\"}, \"Name\": \"Reacciones.Δ PM producto - reactivo\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"categoryAxis\": [{\"properties\": {\"maxMarginFactor\": {\"expr\": {\"Literal\": {\"Value\": \"45D\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Δ PM promedio: producto − reactivo (g/mol)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 750,
+          "y": 460,
+          "z": 3800,
+          "width": 520,
+          "height": 250,
+          "config": "{\"name\": \"v0386ef26521eda1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 460, \"z\": 3800, \"width\": 520, \"height\": 250, \"tabOrder\": 3800}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Reacciones.Compuesto\"}, {\"queryRef\": \"TiposReaccion.Tipo de reacción\"}, {\"queryRef\": \"Reacciones.Nombre reacción\"}, {\"queryRef\": \"Reacciones.Producto\"}, {\"queryRef\": \"Reacciones.Solvente\"}, {\"queryRef\": \"Reacciones.Condiciones\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"Reacciones\", \"Type\": 0}, {\"Name\": \"t\", \"Entity\": \"TiposReaccion\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Compuesto\"}, \"Name\": \"Reacciones.Compuesto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"Tipo de reacción\"}, \"Name\": \"TiposReaccion.Tipo de reacción\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Nombre reacción\"}, \"Name\": \"Reacciones.Nombre reacción\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Producto\"}, \"Name\": \"Reacciones.Producto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Solvente\"}, \"Name\": \"Reacciones.Solvente\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"Condiciones\"}, \"Name\": \"Reacciones.Condiciones\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Detalle de reacciones'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"bold\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#D9DEE5'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}], \"dropShadow\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    }
+  ]
+}

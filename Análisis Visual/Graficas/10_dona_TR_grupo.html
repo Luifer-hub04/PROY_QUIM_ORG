@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-0dc33c44959320e3fd8eb2e9d683c6f2"}, "mark": {"type": "arc", "innerRadius": 60, "outerRadius": 100}, "encoding": {"color": {"field": "Categoria_Combinada", "title": "Grupo (Reacci\u00f3n, Medio)", "type": "nominal"}, "theta": {"field": "TR", "title": "Suma de TR", "type": "quantitative"}, "tooltip": [{"field": "Categoria_Combinada", "type": "nominal"}, {"field": "TR", "type": "quantitative"}]}, "height": 350, "params": [{"name": "param_1e9efca18e7a2868", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Distribuci\u00f3n de TR por Grupo (Reacci\u00f3n, Medio)", "width": 350, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-0dc33c44959320e3fd8eb2e9d683c6f2": [{"Categoria_Combinada": "AN (\u00c1cido)", "TR": 24.0}, {"Categoria_Combinada": "Condensaci\u00f3n (Apolar)", "TR": 30.0}, {"Categoria_Combinada": "Redox (Apolar)", "TR": 25.0}, {"Categoria_Combinada": "Redox (B\u00e1sico)", "TR": 1.5}, {"Categoria_Combinada": "Redox (Neutro)", "TR": 90.0}, {"Categoria_Combinada": "SN (Apolar)", "TR": 1.0}, {"Categoria_Combinada": "SN (B\u00e1sico)", "TR": 18.0}, {"Categoria_Combinada": "SN (Neutro)", "TR": 30.0}, {"Categoria_Combinada": "SN (\u00c1cido)", "TR": 60.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
