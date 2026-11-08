@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Dashboard_Quimica_Organica"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8d81a8f9-fa5b-46c1-ace9-fec0d5a9f03e"
+  }
+}

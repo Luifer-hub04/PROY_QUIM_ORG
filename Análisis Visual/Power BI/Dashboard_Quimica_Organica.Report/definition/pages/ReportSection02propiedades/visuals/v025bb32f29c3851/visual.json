@@ -1,0 +1,234 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v025bb32f29c3851",
+  "position": {
+    "x": 220,
+    "y": 460,
+    "z": 2500,
+    "height": 250,
+    "width": 1050,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Compuesto"
+                }
+              },
+              "queryRef": "Compuestos.Compuesto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Grupo funcional"
+                }
+              },
+              "queryRef": "Compuestos.Grupo funcional"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Puentes de H"
+                }
+              },
+              "queryRef": "Compuestos.Puentes de H"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "PM (g/mol)"
+                }
+              },
+              "queryRef": "Compuestos.PM (g/mol)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "pf (°C)"
+                }
+              },
+              "queryRef": "Compuestos.pf (°C)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Peb (°C)"
+                }
+              },
+              "queryRef": "Compuestos.Peb (°C)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Densidad (g/cm3)"
+                }
+              },
+              "queryRef": "Compuestos.Densidad (g/cm3)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Solubilidad (g/L)"
+                }
+              },
+              "queryRef": "Compuestos.Solubilidad (g/L)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "pKa"
+                }
+              },
+              "queryRef": "Compuestos.pKa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compuestos"
+                    }
+                  },
+                  "Property": "Momento dipolar (D)"
+                }
+              },
+              "queryRef": "Compuestos.Momento dipolar (D)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabla de propiedades (CAS-SciFinder, datos limpios)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9DEE5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

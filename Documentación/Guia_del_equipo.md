@@ -282,7 +282,7 @@ Se agrega la clasificación química de los **11 compuestos asignados**:
   responda a un clic.
 - En **Power Query** cada tabla: lee el objeto Tabla del Excel → asigna tipos de
   dato → quita filas vacías → renombra columnas con unidades (`PM (g/mol)`).
-- La ruta del Excel está en el parámetro `RutaDatos` (cada integrante la ajusta).
+- El parámetro `RutaDatos` apunta al Excel publicado en GitHub (`raw.githubusercontent.com/.../Datos/datos_modelo_powerbi.xlsx`), por eso el informe abre en cualquier computador sin cambiar rutas. Power Query decide: si `RutaDatos` empieza por `http` usa `Web.Contents`, si no `File.Contents` (ruta local, para trabajar sin internet).
 - Filtro del informe: `Asignado = Sí` (panel Filtros) para mostrar sólo los 11
   compuestos del proyecto; se puede quitar para ver los 80 reactivos.
 
