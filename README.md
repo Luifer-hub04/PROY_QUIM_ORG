@@ -65,6 +65,18 @@ PROY_QUIM_ORG/
 > 🔗 **Enlace a Power BI Service:** _pendiente de publicar_
 > <!-- Reemplazar por el enlace de "Publicar en la web" o del área de trabajo -->
 
+**Abrir el dashboard en cualquier computador** (Power BI Desktop, con internet):
+
+1. Descargar el repositorio (`git clone` / `git pull`).
+2. Abrir `Análisis Visual/Power BI/Dashboard_Quimica_Organica.pbip`.
+3. Inicio → **Actualizar**: los datos se descargan del Excel publicado en GitHub,
+   sin importar en qué carpeta esté el proyecto.
+4. Si pregunta cómo conectarse a `raw.githubusercontent.com`: **Anónimo → Conectar**.
+
+Sin internet: Transformar datos → **Editar parámetros** → `RutaDatos` = ruta local de
+`Datos\datos_modelo_powerbi.xlsx` → Actualizar. Más detalles en el
+[README de Power BI](An%C3%A1lisis%20Visual/Power%20BI/README.md).
+
 ## 📄 Compilar el informe
 
 Desde la carpeta `Documentación/`:
