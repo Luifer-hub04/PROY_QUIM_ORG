@@ -1,0 +1,130 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "amd_pnl_texto",
+  "position": {
+    "x": 265,
+    "y": 110,
+    "z": 90200,
+    "height": 500,
+    "width": 750,
+    "tabOrder": 18000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Mecanismos: amidas",
+                    "textStyle": {
+                      "fontSize": "15pt",
+                      "color": "#D95F02",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. Hidrólisis ácida",
+                    "textStyle": {
+                      "fontSize": "11.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El H₃O⁺ protona el oxígeno del carbonilo y lo vuelve más electrófilo. El agua se adiciona y forma un intermedio tetraédrico; tras transferir el protón al nitrógeno sale NH₃, que en medio ácido queda como NH₄⁺ (por eso la reacción no se revierte).",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "6pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. Hidrólisis básica",
+                    "textStyle": {
+                      "fontSize": "11.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El OH⁻ ataca directamente el carbonilo. El intermedio tetraédrico expulsa el ion amiduro (mal grupo saliente, por eso hace falta calentar a reflujo), que toma el protón del ácido y deja el carboxilato RCOO⁻ y la amina libre.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "6pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "3. Síntesis desde ácido carboxílico y amina",
+                    "textStyle": {
+                      "fontSize": "11.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A temperatura ambiente sólo ocurre la reacción ácido–base: RCOO⁻ R'NH₃⁺. Al calentar por encima de 100 °C se elimina agua y se forma el enlace amida; en el laboratorio se activa antes el ácido (cloruro de acilo, DCC) o se usan catalizadores, como las transamidaciones con Fe, Cu o MoS₂ entre 100 y 150 °C de la base de datos.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

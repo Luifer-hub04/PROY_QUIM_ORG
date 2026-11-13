@@ -35,7 +35,7 @@ jerárquicamente las variables con comportamiento similar.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{01_heatmap_spearman.png}
-	\caption{Matriz de correlación de Spearman entre las propiedades fisicoquímicas.}
+	\caption{Matriz de correlación de Spearman entre las propiedades fisicoquímicas, incluida la presión de vapor (Pv).}
 	\label{fig:heatmap}
 \end{figure}
 
@@ -89,6 +89,14 @@ con el cursor. En la Figura~\ref{fig:burbujas}, trimetilamina
 (\SI{2.8}{\degreeCelsius}) y N-metiletanamina (\SI{36.5}{\degreeCelsius}) tienen
 el mismo peso molecular (\SI{59.11}{\gram\per\mole}): la diferencia se debe a que
 sólo la segunda posee enlace N--H y forma puentes de hidrógeno.
+La Figura~\ref{fig:pm-dip} muestra en un solo plano las tres variables que
+antes se presentaban en una gráfica 3D: las amidas forman un grupo separado
+con momento dipolar entre 3,7 y 4,6~D y puntos de ebullición de 164 a
+\SI{222}{\degreeCelsius}, mientras que las aminas alifáticas de peso molecular
+parecido (31--59~\si{\gram\per\mole}), con momentos menores de 1,4~D, hierven
+por debajo de \SI{40}{\degreeCelsius}. La
+bencidina es la excepción entre las aminas: su punto de ebullición alto se
+debe a su mayor peso molecular y a sus dos grupos \ce{NH2} aromáticos.
 \textit{[Interpretación pendiente.]}
 
 \begin{figure}[htbp]
@@ -100,9 +108,9 @@ sólo la segunda posee enlace N--H y forma puentes de hidrógeno.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\columnwidth]{12_plotly_3d_pm_dipolo_peb.png}
-	\caption{Espacio tridimensional de peso molecular, momento dipolar y punto de ebullición por grupo funcional.}
-	\label{fig:3d}
+	\includegraphics[width=\columnwidth]{12_plotly_pm_dipolo_peb.png}
+	\caption{Peso molecular frente a momento dipolar; el color indica el punto de ebullición y la forma del marcador separa aminas (círculos) de amidas (rombos).}
+	\label{fig:pm-dip}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -148,6 +156,9 @@ probabilidad de TR según el tipo de reacción y el medio.
 	\caption{Participación de TR por grupo (tipo de reacción, medio).}
 	\label{fig:dona}
 \end{figure}
+
+% Análisis comparativo de reacciones (aminas vs. amidas), alineado con el dashboard
+\input{Reacciones/reacciones_analisis}
 
 \section{Conclusiones y Perspectiva}
 \fontsize{12}{14}\selectfont

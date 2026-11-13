@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ini_nav_txt",
+  "position": {
+    "x": 10,
+    "y": 525,
+    "z": 1600,
+    "height": 50,
+    "width": 1260,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Explorar el tablero",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Elige una sección: las pestañas superiores de cada página permiten volver aquí o cambiar entre aminas y amidas.",
+                    "textStyle": {
+                      "fontSize": "10pt",
+                      "color": "#5A6B7B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

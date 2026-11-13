@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "ami_bm_grupo",
+      "displayName": "Aminas",
+      "children": [
+        "ami_bm_entrada",
+        "ami_bm_salida"
+      ]
+    },
+    {
+      "name": "amd_bm_grupo",
+      "displayName": "Amidas",
+      "children": [
+        "amd_bm_entrada",
+        "amd_bm_salida"
+      ]
+    }
+  ]
+}

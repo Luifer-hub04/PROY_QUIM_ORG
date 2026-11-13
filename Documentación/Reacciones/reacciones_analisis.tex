@@ -1,0 +1,56 @@
+% =====================================================================
+%  ANÁLISIS DE REACCIONES: AMINAS FRENTE A AMIDAS
+%  Se incluye desde Valentina/valentina.tex, antes de las conclusiones.
+%  Valores calculados con Datos/datos_modelo_powerbi.xlsx (tabla Reacciones,
+%  compuestos asignados); son los mismos KPI de la página
+%  "6. Análisis de reacciones" del dashboard de Power BI.
+% =====================================================================
+
+\subsection{Análisis comparativo de reacciones: aminas frente a amidas}
+\label{sec:analisis-reacciones}
+La base de CAS-SciFinder no reporta rendimientos ni porcentajes de
+conversión, así que la reactividad se comparó con las condiciones que cada
+reacción necesitó: temperatura, tiempo y uso de catalizador
+(Tabla~\ref{tab:reacciones}). Los porcentajes de temperatura se calculan
+sobre las reacciones que reportan ese dato (61 de aminas y 38 de amidas).
+
+\begin{table}[htbp]
+	\centering
+	\captionsetup{width=\columnwidth, justification=justified}
+	\caption{Condiciones de reacción de las aminas y amidas asignadas.}
+	\label{tab:reacciones}
+	\small
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Indicador} & \textbf{Aminas} & \textbf{Amidas} \\
+		\midrule
+		Reacciones registradas                     & 65          & 40          \\
+		Temperatura mediana (\si{\degreeCelsius})  & 25          & 95          \\
+		Reacciones a $T \le 30$\,\si{\degreeCelsius} & \SI{68.9}{\percent} & \SI{23.7}{\percent} \\
+		Reacciones a $T \ge 80$\,\si{\degreeCelsius} & \SI{11.5}{\percent} & \SI{57.9}{\percent} \\
+		Tiempo mediano (h)                         & 3,5         & 12          \\
+		Uso de catalizador                         & \SI{23.1}{\percent} & \SI{57.5}{\percent} \\
+		Sustitución nucleofílica (SN)              & \SI{55.4}{\percent} & \SI{47.5}{\percent} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Las aminas reaccionan sobre todo a temperatura ambiente y en pocas horas:
+su par libre $sp^3$ es un buen nucleófilo y la sustitución nucleofílica es
+el mecanismo dominante (Sección~\ref{sec:reac-aminas}). Las amidas, en
+cambio, necesitan una temperatura mediana 70\,\si{\degreeCelsius} mayor,
+más de tres veces el tiempo y más del doble de uso de catalizadores. Las
+transamidaciones de la base (acetamida, N-metilacetamida y
+N,N-dimetilacetamida con bencilamina) se hicieron entre 100 y
+150\,\si{\degreeCelsius} con catalizadores de Fe, Cu, Nd o \ce{MoS2}, y las
+condensaciones de la urea llegaron a 200\,\si{\degreeCelsius}.
+
+Esta diferencia es la consecuencia práctica de la estabilidad
+termodinámica descrita en la Sección~\ref{sec:estructura}: la resonancia
+N--C=O hace que el carbonilo de la amida sea poco electrófilo y que su
+nitrógeno sea poco nucleófilo, de modo que hay que suministrar energía (o
+bajar la barrera con un catalizador) para romper o formar el enlace C--N.
+La misma resonancia explica los momentos dipolares altos y los puntos de
+ebullición elevados de las amidas en la Figura~\ref{fig:pm-dip}. Estos
+indicadores pueden filtrarse por familia, medio y tipo de reacción en la
+página ``Análisis de reacciones'' del dashboard de Power BI.

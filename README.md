@@ -45,6 +45,7 @@ PROY_QUIM_ORG/
     ├── main.tex                → Archivo maestro (une las partes)
     ├── Sara/sara.tex           → Introducción, Marco Teórico, Tabla de datos
     ├── Valentina/valentina.tex → Metodología, Análisis gráfico, Conclusiones
+    ├── Reacciones/             → Reactividad de aminas y amidas (teoría + análisis de reacciones)
     ├── references.bib          → Bibliografía (BibLaTeX + Biber)
     ├── imagenes/               → Figuras usadas en el informe
     └── main.pdf                → Informe compilado

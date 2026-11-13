@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ami_pnl_texto",
+  "position": {
+    "x": 265,
+    "y": 110,
+    "z": 90200,
+    "height": 500,
+    "width": 750,
+    "tabOrder": 18000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Mecanismos: aminas",
+                    "textStyle": {
+                      "fontSize": "15pt",
+                      "color": "#1B9E77",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. Alquilación de una amina (SN2)",
+                    "textStyle": {
+                      "fontSize": "11.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El par libre del nitrógeno ataca al carbono del haluro de alquilo por detrás del grupo saliente, en un solo paso concertado: CH₃NH₂ + CH₃–I → [CH₃NH₂···CH₃···I]‡ → CH₃NH₂CH₃⁺ I⁻.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Una base retira el H⁺ y queda dimetilamina, que vuelve a atacar: se forman trimetilamina y finalmente la sal de tetrametilamonio (CH₃)₄N⁺ I⁻.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "6pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. Acilación (adición–eliminación)",
+                    "textStyle": {
+                      "fontSize": "11.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "La amina se adiciona al C=O del cloruro de acilo (intermedio tetraédrico); el carbonilo se regenera expulsando Cl⁻ y se pierde H⁺: CH₃NH₂ + CH₃COCl → CH₃CONHCH₃ + HCl.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "6pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "3. Reacción con ácido nitroso (diazotación)",
+                    "textStyle": {
+                      "fontSize": "11.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "NaNO₂ + HCl a 0–5 °C genera el ion nitrosonio NO⁺. La amina primaria lo ataca, pierde agua y forma el ion diazonio R–N≡N⁺. En la bencidina (aromática) el diazonio es estable y sirve para colorantes azoicos; en las alifáticas se libera N₂. Las aminas secundarias forman N-nitrosaminas (R₂N–N=O), contaminantes cancerígenos de interés ambiental.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

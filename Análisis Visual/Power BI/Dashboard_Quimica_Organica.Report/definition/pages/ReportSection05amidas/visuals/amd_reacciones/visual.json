@@ -1,0 +1,191 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "amd_reacciones",
+  "position": {
+    "x": 10,
+    "y": 420,
+    "z": 1700,
+    "height": 290,
+    "width": 400,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Reacciones clave",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#D95F02",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Hidrólisis ácida: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "RCONH₂ + H₃O⁺ (Δ) → RCOOH + NH₄⁺.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Hidrólisis básica: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "RCONH₂ + OH⁻ (Δ) → RCOO⁻ + NH₃.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Síntesis: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "RCOOH + R'NH₂ → sal de amonio → (Δ, −H₂O) RCONHR'.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "En el ambiente: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "la ureasa hidroliza la urea a NH₃ + CO₂ en suelos fertilizados.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9DEE5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

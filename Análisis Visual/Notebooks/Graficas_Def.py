@@ -20,6 +20,7 @@ import numpy as np
 import seaborn as sn
 import altair as alt
 import matplotlib.pyplot as plt
+import plotly as py
 data = pd.read_excel("/content/drive/MyDrive/DATOS_limpio.xlsx")
 # %matplotlib inline
 df = pd.read_excel("/content/drive/MyDrive/DATOS_limpio.xlsx")
@@ -47,7 +48,7 @@ df = pd.read_csv("filtered_compounds.csv")
 params = df.select_dtypes(include="number")
 params.head()
 
-params = df[["PM(g/mol)", "pf(°C)", "P.eb(°C)", "Densidad(g/cm3)", "pKa", "Momento_dipolar", "S(g/L)"]]
+params = df[["PM(g/mol)", "pf(°C)", "P.eb(°C)", "Densidad(g/cm3)", "pKa", "Momento_dipolar", "S(g/L)", "Pv(Pas)"]]
 
 import pandas as pd
 import numpy as np
@@ -69,9 +70,13 @@ for col in params_clean.columns:
 corr = params_clean.corr(method="spearman")
 
 import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Creamos una paleta personalizada para 'Oro Tierra' con tonos cálidos y sobrios
+palette_oro_tierra = sns.diverging_palette(35, 45, s=75, l=50, sep=10, center="light", as_cmap=True)
 
 plt.figure(figsize=(8, 6))
-sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f")
+sns.heatmap(corr, annot=True, cmap=palette_oro_tierra, center=0, fmt=".2f")
 plt.title("Correlación de Spearman")
 plt.show()
 
@@ -85,14 +90,14 @@ import seaborn as sns
 # Configuramos el estilo del gráfico
 sns.set_theme(style="whitegrid")
 
-# Creamos el gráfico de dispersión con una línea de regresión
+# Creamos el gráfico de dispersión con una línea de regresión usando los colores solicitados
 plt.figure(figsize=(8, 6))
 sns.regplot(
     data=params_clean,
     x='pf(°C)',
     y='Densidad(g/cm3)',
-    scatter_kws={'alpha':0.6, 'color': '#d95f02', 's': 50},
-    line_kws={'color': '#1b9e77', 'linewidth': 2}
+    scatter_kws={'alpha': 0.8, 'color': '#fec44f', 's': 50},
+    line_kws={'color': '#d95f0e', 'linewidth': 2}
 )
 
 # Añadimos títulos y etiquetas personalizadas
@@ -110,14 +115,14 @@ import seaborn as sns
 # Configuramos el estilo estético del gráfico
 sns.set_theme(style="whitegrid")
 
-# Creamos el gráfico de dispersión con línea de regresión para P.eb vs Densidad
+# Creamos el gráfico de dispersión con línea de regresión para P.eb vs Densidad usando los nuevos colores
 plt.figure(figsize=(8, 6))
 sns.regplot(
     data=params_clean,
     x='P.eb(°C)',
     y='Densidad(g/cm3)',
-    scatter_kws={'alpha':0.6, 'color': '#d95f02', 's': 50},
-    line_kws={'color': '#1b9e77', 'linewidth': 2}
+    scatter_kws={'alpha': 0.8, 'color': '#fec44f', 's': 50},
+    line_kws={'color': '#d95f0e', 'linewidth': 2}
 )
 
 # Añadimos etiquetas y título
@@ -135,14 +140,14 @@ import seaborn as sns
 # Configuramos el estilo estético del gráfico
 sns.set_theme(style="whitegrid")
 
-# Creamos el gráfico de dispersión con línea de regresión para pf vs P.eb
+# Creamos el gráfico de dispersión con línea de regresión para pf vs P.eb usando los nuevos colores
 plt.figure(figsize=(8, 6))
 sns.regplot(
     data=params_clean,
     x='pf(°C)',
     y='P.eb(°C)',
-    scatter_kws={'alpha':0.6, 'color': '#d95f02', 's': 50},
-    line_kws={'color': '#1b9e77', 'linewidth': 2}
+    scatter_kws={'alpha': 0.8, 'color': '#fec44f', 's': 50},
+    line_kws={'color': '#d95f0e', 'linewidth': 2}
 )
 
 # Añadimos etiquetas y título
@@ -160,14 +165,14 @@ import seaborn as sns
 # Configuramos el estilo estético del gráfico
 sns.set_theme(style="whitegrid")
 
-# Creamos el gráfico de dispersión con línea de regresión para Momento_dipolar vs P.eb
+# Creamos el gráfico de dispersión con línea de regresión para Momento_dipolar vs P.eb usando los nuevos colores
 plt.figure(figsize=(8, 6))
 sns.regplot(
     data=params_clean,
     x='Momento_dipolar',
     y='P.eb(°C)',
-    scatter_kws={'alpha':0.6, 'color': '#d95f02', 's': 50},
-    line_kws={'color': '#1b9e77', 'linewidth': 2}
+    scatter_kws={'alpha': 0.8, 'color': '#fec44f', 's': 50},
+    line_kws={'color': '#d95f0e', 'linewidth': 2}
 )
 
 # Añadimos etiquetas y título
@@ -185,6 +190,13 @@ df_filtrado = df[['Tipo_reaccion', 'Medio']]
 # Mostramos las primeras filas del resultado
 display(df_filtrado.head(10))
 
+import pandas as pd
+import altair as alt
+
+# Definimos y calculamos las frecuencias para evitar el NameError
+FrecuenciaMedio = df_filtrado['Medio'].value_counts()
+FrecuenciaTipo_reaccion = df_filtrado['Tipo_reaccion'].value_counts()
+
 df_freq_medio = FrecuenciaMedio.reset_index()
 df_freq_medio.columns = ['Valor', 'Frecuencia']
 df_freq_medio['Variable'] = 'Medio'
@@ -200,7 +212,7 @@ chart = (
     .encode(
         x=alt.X('Valor:N', title='Categoría', axis=alt.Axis(labelAngle=0)),
         y=alt.Y('Frecuencia:Q', title='Frecuencia'),
-                color=alt.Color('Variable:N', title='Variable/Atributo', scale=alt.Scale(scheme='tableau10')),
+        color=alt.Color('Variable:N', title='Variable/Atributo', scale=alt.Scale(range=['#fec44f', '#d95f0e', '#fff7bc'])),
         xOffset='Variable:N',
         tooltip=['Variable', 'Valor', 'Frecuencia']
     )
@@ -240,7 +252,7 @@ chart = (
     .encode(
         x=alt.X('Valor:N', title='Categoría', sort='-y'),
         y=alt.Y('Frecuencia:Q', title='Frecuencia'),
-        color=alt.Color('Variable:N', title='Variable/Atributo', scale=alt.Scale(scheme='tableau10')),
+        color=alt.Color('Variable:N', title='Variable/Atributo', scale=alt.Scale(range=['#fec44f', '#d95f0e', '#fff7bc'])),
         xOffset='Variable:N',
         tooltip=['Variable', 'Valor', 'Frecuencia']
     )
@@ -252,6 +264,10 @@ chart = (
     .interactive()
 )
 chart.display()
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
 
 sns.set_theme(style="whitegrid")
 
@@ -271,9 +287,10 @@ df_violin['TR'] = df_violin['TR'].str.replace(',', '.', regex=False)
 df_violin['TR'] = df_violin['TR'].str.extract(r'([-+]?\d*\.?\d+)')
 df_violin['TR'] = pd.to_numeric(df_violin['TR'], errors='coerce')
 
-
 df_violin = df_violin.dropna(subset=['Tipo_reaccion', 'Medio', 'TR'])
 
+# Definimos la paleta de colores personalizada usando los nuevos tonos solicitados
+colores_tierra_nuevos = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
 
 plt.figure(figsize=(12, 6))
 sns.violinplot(
@@ -281,10 +298,9 @@ sns.violinplot(
     x='Tipo_reaccion',
     y='TR',
     hue='Medio',
-    palette='viridis',
+    palette=colores_tierra_nuevos,
     inner='quartile'
 )
-
 
 plt.title('Distribución de TR por Tipo de Reacción y Medio', fontsize=14, pad=15)
 plt.xlabel('Tipo de Reacción', fontsize=12)
@@ -313,8 +329,26 @@ df_boxplot['TR'] = pd.to_numeric(df_boxplot['TR'], errors='coerce')
 df_boxplot = df_boxplot.dropna(subset=['Tipo_reaccion', 'Medio', 'TR'])
 
 plt.figure(figsize=(14, 7))
-df_boxplot.boxplot(by=['Tipo_reaccion', 'Medio'], column=['TR'], figsize=(14, 7), grid=True, rot=45)
 
+# Creamos el boxplot con patch_artist=True para poder pintar las cajas con nuestra paleta
+box = df_boxplot.boxplot(
+    by=['Tipo_reaccion', 'Medio'],
+    column=['TR'],
+    figsize=(14, 7),
+    grid=True,
+    rot=45,
+    patch_artist=True,
+    return_type='both'
+)
+
+# Definimos los colores solicitados
+colores_nuevos = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02']
+
+# Aplicamos los colores de forma cíclica a las cajas
+for row_key, sub_ax in box.items():
+    for i, patch in enumerate(sub_ax.patches):
+        patch.set_facecolor(colores_nuevos[i % len(colores_nuevos)])
+        patch.set_edgecolor('#cc4c02')
 
 plt.title('Diagrama de Cajas y Bigotes de TR por Tipo de Reacción y Medio', fontsize=14, pad=15)
 plt.suptitle('')
@@ -342,16 +376,30 @@ df_donut['Categoria_Combinada'] = df_donut['Tipo_reaccion'] + ' (' + df_donut['M
 
 df_grouped = df_donut.groupby('Categoria_Combinada', as_index=False)['TR'].sum()
 
+# Limitamos a un máximo de 5 intervalos
+# Si hay más de 5 categorías, dejamos las 4 más grandes y agrupamos el resto en 'Otros'
+if len(df_grouped) > 5:
+    df_grouped = df_grouped.sort_values(by='TR', ascending=False).reset_index(drop=True)
+    top_categories = df_grouped.loc[:3, 'Categoria_Combinada'].tolist()
+
+    df_grouped['Categoria_Combinada'] = df_grouped['Categoria_Combinada'].apply(
+        lambda x: x if x in top_categories else 'Otros'
+    )
+    df_grouped = df_grouped.groupby('Categoria_Combinada', as_index=False)['TR'].sum()
+
+# Definimos la lista con la nueva paleta de colores proporcionada por el usuario
+colores_donut = ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854']
+
 grafico_altair = (
     alt.Chart(df_grouped)
     .mark_arc(innerRadius=60, outerRadius=100)
     .encode(
         theta=alt.Theta(field="TR", type="quantitative", title="Suma de TR"),
-        color=alt.Color(field="Categoria_Combinada", type="nominal", title="Grupo (Reacción, Medio)"),
+        color=alt.Color(field="Categoria_Combinada", type="nominal", title="Grupo (Reacción, Medio)", scale=alt.Scale(range=colores_donut)),
         tooltip=['Categoria_Combinada', 'TR']
     )
     .properties(
-        title="Gráfico de Dona en Altair: Distribución de TR por Grupo",
+        title="Gráfico de Dona en Altair: Distribución de TR por Grupo (Máx. 5)",
         width=350,
         height=350
     )

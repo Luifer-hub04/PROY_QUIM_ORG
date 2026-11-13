@@ -10,6 +10,30 @@ Dashboard_Quimica_Organica.SemanticModel/  ← modelo: tablas, relaciones, medid
 Dashboard_Quimica_Organica.Report/         ← reporte: páginas y visuales
 ```
 
+## Páginas y navegación
+
+| Página | Contenido |
+|---|---|
+| **Inicio** | Título del proyecto, introducción, KPI generales y botones de navegación |
+| 1. Panorama · 2. Propiedades · 3. Reacciones | Exploración de los datos (cada una tiene un botón **⌂ Inicio**) |
+| **4. Aminas** | Basicidad, reacciones clave (alquilación, acilación, amonio cuaternario, ácido nitroso), KPI filtrados a aminas |
+| **5. Amidas** | Resonancia y polaridad, hidrólisis ácida/básica, síntesis desde ácidos carboxílicos |
+| **6. Análisis de reacciones** | KPI de laboratorio (T mediana, % a T ambiente, % con calentamiento, tiempo, catalizador) con segmentadores por familia, medio, mecanismo y catalizador |
+
+Las páginas 4–6 tienen pestañas (Inicio · Aminas · Amidas · Análisis) que usan
+la acción **Navegación de página**.
+
+**Marcadores** (Ver → Marcadores), agrupados en *Aminas* y *Amidas*:
+
+| Marcador | Efecto | Botón |
+|---|---|---|
+| `Panel_Detalle_Entrada` | Muestra el panel de mecanismos (fondo oscuro, rectángulo, texto y botón de cierre) | **Ver mecanismo** |
+| `Panel_Detalle_Salida` | Oculta el mismo panel y limpia el lienzo | **Cerrar / Volver** |
+
+Ambos marcadores sólo afectan a los visuales del panel (*Visuales seleccionados*)
+y no cambian filtros (*Datos* desactivado). En Power BI Desktop los botones se
+activan con **Ctrl + clic**; en el servicio, con clic normal.
+
 ## Abrirlo por primera vez (cualquier computador)
 
 1. Doble clic en `Dashboard_Quimica_Organica.pbip` (o Power BI Desktop → Archivo → Abrir).

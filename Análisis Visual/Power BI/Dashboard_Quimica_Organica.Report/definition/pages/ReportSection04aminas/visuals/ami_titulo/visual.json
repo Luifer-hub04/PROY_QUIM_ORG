@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ami_titulo",
+  "position": {
+    "x": 10,
+    "y": 5,
+    "z": 1100,
+    "height": 62,
+    "width": 1260,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Aminas: bases y nucleófilos",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Estructura, basicidad y reacciones clave (alquilación, acilación, sales de amonio cuaternario y ácido nitroso).",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#5A6B7B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

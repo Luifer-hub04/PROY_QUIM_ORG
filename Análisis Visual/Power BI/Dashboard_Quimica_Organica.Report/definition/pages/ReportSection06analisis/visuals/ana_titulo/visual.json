@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ana_titulo",
+  "position": {
+    "x": 10,
+    "y": 5,
+    "z": 1100,
+    "height": 62,
+    "width": 1260,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Análisis de reacciones: aminas frente a amidas",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Condiciones de laboratorio (temperatura, tiempo, catalizador) como medida de reactividad y de estabilidad termodinámica. Filtra por familia o condición experimental.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#5A6B7B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

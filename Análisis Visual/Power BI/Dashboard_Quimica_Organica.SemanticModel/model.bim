@@ -543,6 +543,44 @@
             ],
             "formatString": "0.0",
             "lineageTag": "13b2bf81-415b-4802-a7d4-5acf3234e209"
+          },
+          {
+            "name": "Temperatura mediana (°C)",
+            "description": "Mediana de la temperatura de reacción reportada.",
+            "expression": "MEDIAN ( Reacciones[Temperatura (°C)] )",
+            "formatString": "0",
+            "lineageTag": "1036ea9a-c113-4139-ae7b-7af722b7fd32"
+          },
+          {
+            "name": "Tiempo mediano (h)",
+            "description": "Mediana del tiempo de reacción reportado.",
+            "expression": "MEDIAN ( Reacciones[Tiempo (h)] )",
+            "formatString": "0.0",
+            "lineageTag": "1a10c48e-3d88-4034-b89b-f394a27b2ea6"
+          },
+          {
+            "name": "% a temperatura ambiente",
+            "description": "Reacciones a 30 °C o menos, sobre las que reportan temperatura.",
+            "expression": [
+              "DIVIDE (",
+              "    COUNTROWS ( FILTER ( Reacciones, NOT ISBLANK ( Reacciones[Temperatura (°C)] ) && Reacciones[Temperatura (°C)] <= 30 ) ),",
+              "    COUNTROWS ( FILTER ( Reacciones, NOT ISBLANK ( Reacciones[Temperatura (°C)] ) ) )",
+              ")"
+            ],
+            "formatString": "0.0%",
+            "lineageTag": "c2d45119-d3e1-4268-8a92-d4ebec85fae3"
+          },
+          {
+            "name": "% con calentamiento",
+            "description": "Reacciones a 80 °C o más, sobre las que reportan temperatura.",
+            "expression": [
+              "DIVIDE (",
+              "    COUNTROWS ( FILTER ( Reacciones, NOT ISBLANK ( Reacciones[Temperatura (°C)] ) && Reacciones[Temperatura (°C)] >= 80 ) ),",
+              "    COUNTROWS ( FILTER ( Reacciones, NOT ISBLANK ( Reacciones[Temperatura (°C)] ) ) )",
+              ")"
+            ],
+            "formatString": "0.0%",
+            "lineageTag": "1167cfc7-7e1a-42aa-984b-22f71332a7de"
           }
         ],
         "partitions": [

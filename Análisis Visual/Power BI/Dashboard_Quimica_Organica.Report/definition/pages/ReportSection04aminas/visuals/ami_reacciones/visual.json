@@ -1,0 +1,191 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ami_reacciones",
+  "position": {
+    "x": 10,
+    "y": 420,
+    "z": 1700,
+    "height": 290,
+    "width": 400,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Reacciones clave",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1B9E77",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Alquilación (SN2): ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "RNH₂ + R'X → RNHR' + HX; la amina producto sigue reaccionando.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sal de amonio cuaternario: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "R₃N + CH₃I → R₃NCH₃⁺ I⁻; ya no es básica.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Acilación: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "RNH₂ + R'COCl → R'CONHR + HCl; forma amidas.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ácido nitroso: ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "1.ª → sal de diazonio; 2.ª → N-nitrosamina; 3.ª → sal soluble.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9DEE5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

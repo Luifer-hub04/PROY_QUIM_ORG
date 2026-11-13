@@ -16,6 +16,14 @@ Diferencias con el notebook de Colab (correcciones):
      ("Azometina", "N-metiletanamina" estaban unidos en un solo texto).
   3. Las frecuencias de 'Medio' y 'Tipo_reaccion' se calculan ANTES de la gráfica
      de barras de Altair (en el .py exportado estaban después y daba NameError).
+  4. Correcciones del instructor (Graficas_Def.py, nov. 2026): se agrega la presión
+     de vapor Pv(Pas) a la correlación, paleta "oro tierra" en el heatmap, colores
+     #fec44f / #d95f0e en las regresiones y en las barras, paleta tierra en el
+     violín y en las cajas, y la dona se limita a 5 grupos (4 mayores + "Otros").
+  5. Los valores en notación científica de CAS-SciFinder ('3,36_x_10⁵') se leen
+     completos; con sólo extraer el primer número quedaba 3,36 en vez de 336 000.
+  6. La gráfica 3D (PM, momento dipolar, P.eb) se reemplaza por una dispersión 2D
+     PM vs momento dipolar con el punto de ebullición como escala de color.
 
 Uso:  python generar_graficas.py
 Librerías: pandas, numpy, matplotlib, seaborn, altair, plotly, vl-convert-python, kaleido
@@ -64,11 +72,20 @@ def guardar_altair(nombre, chart):
     generadas.extend([f"{nombre}.png", f"{nombre}.html"])
 
 
+SUPERINDICES = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻", "0123456789-")
+
+
 def limpiar_columna(serie):
-    """Mismo método del notebook: coma -> punto y se extrae el primer número."""
-    s = serie.astype(str).str.replace(",", ".", regex=False)
-    s = s.str.extract(r"([-+]?\d*\.?\d+)")[0]
-    return pd.to_numeric(s, errors="coerce")
+    """Mismo método del notebook: coma -> punto y se extrae el primer número.
+
+    Además reconoce la notación científica ('3,36_x_10⁵' -> 336000).
+    """
+    s = serie.astype(str).str.translate(SUPERINDICES).str.replace(",", ".", regex=False)
+    cient = s.str.extract(r"([-+]?\d*\.?\d+)\s*_?x_?\s*10\s*([-+]?\d+)")
+    numero = pd.to_numeric(s.str.extract(r"([-+]?\d*\.?\d+)")[0], errors="coerce")
+    con_exp = cient[0].notna()
+    numero[con_exp] = cient.loc[con_exp, 0].astype(float) * 10.0 ** cient.loc[con_exp, 1].astype(int)
+    return numero
 
 
 # ---------------------------------------------------------------- DATOS
@@ -83,14 +100,21 @@ df = df[df["Sus1"].isin(compounds)].reset_index(drop=True)
 print(f"Filas conservadas: {len(df)}")
 print(df["Sus1"].value_counts().to_string())
 
-params = df[["PM(g/mol)", "pf(°C)", "P.eb(°C)", "Densidad(g/cm3)", "pKa", "Momento_dipolar", "S(g/L)"]]
+params = df[["PM(g/mol)", "pf(°C)", "P.eb(°C)", "Densidad(g/cm3)", "pKa", "Momento_dipolar", "S(g/L)", "Pv(Pas)"]]
 params_clean = params.apply(limpiar_columna)
+
+# Paletas pedidas por el instructor
+PALETA_ORO_TIERRA = sns.diverging_palette(35, 45, s=75, l=50, sep=10, center="light", as_cmap=True)
+COLOR_PUNTOS, COLOR_LINEA = "#fec44f", "#d95f0e"
+COLORES_TIERRA = ["#ffffd4", "#fed98e", "#fe9929", "#cc4c02"]
+COLORES_BARRAS = ["#fec44f", "#d95f0e", "#fff7bc"]
+COLORES_DONA = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"]
 
 # ---------------------------------------------------------------- 1-2. CORRELACIÓN
 corr = params_clean.corr(method="spearman")
 
 plt.figure(figsize=(8, 6))
-sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f")
+sns.heatmap(corr, annot=True, cmap=PALETA_ORO_TIERRA, center=0, fmt=".2f")
 plt.title("Correlación de Spearman")
 guardar("01_heatmap_spearman")
 
@@ -112,8 +136,8 @@ regresiones = [
 for nombre, x, y, titulo, xl, yl in regresiones:
     plt.figure(figsize=(8, 6))
     sns.regplot(data=params_clean, x=x, y=y,
-                scatter_kws={"alpha": 0.6, "color": "#d95f02", "s": 50},
-                line_kws={"color": "#1b9e77", "linewidth": 2})
+                scatter_kws={"alpha": 0.8, "color": COLOR_PUNTOS, "s": 50},
+                line_kws={"color": COLOR_LINEA, "linewidth": 2})
     plt.title(f"Gráfico de Dispersión: {titulo}", fontsize=14, pad=15)
     plt.xlabel(xl, fontsize=12)
     plt.ylabel(yl, fontsize=12)
@@ -126,7 +150,7 @@ df_filtrado["TR"] = limpiar_columna(df["TR"])
 df_tr = df_filtrado.dropna(subset=["Tipo_reaccion", "Medio", "TR"])
 
 plt.figure(figsize=(12, 6))
-sns.violinplot(data=df_tr, x="Tipo_reaccion", y="TR", hue="Medio", palette="viridis", inner="quartile")
+sns.violinplot(data=df_tr, x="Tipo_reaccion", y="TR", hue="Medio", palette=COLORES_TIERRA, inner="quartile")
 plt.title("Distribución de TR por Tipo de Reacción y Medio", fontsize=14, pad=15)
 plt.xlabel("Tipo de Reacción", fontsize=12)
 plt.ylabel("TR", fontsize=12)
@@ -135,7 +159,11 @@ plt.legend(title="Medio", bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
 guardar("07_violin_TR_tipo_medio")
 
-ax = df_tr.boxplot(by=["Tipo_reaccion", "Medio"], column=["TR"], figsize=(14, 7), grid=True, rot=45)
+ax = df_tr.boxplot(by=["Tipo_reaccion", "Medio"], column=["TR"], figsize=(14, 7), grid=True, rot=45,
+                   patch_artist=True, medianprops=dict(color="#cc4c02", linewidth=2.5))
+for i, caja in enumerate(ax.patches):          # cajas pintadas con la paleta tierra
+    caja.set_facecolor(COLORES_TIERRA[i % len(COLORES_TIERRA)])
+    caja.set_edgecolor("#cc4c02")
 ax.set_title("Diagrama de Cajas y Bigotes de TR por Tipo de Reacción y Medio", fontsize=14, pad=15)
 plt.suptitle("")
 ax.set_xlabel("Grupo (Tipo de Reacción, Medio)", fontsize=12)
@@ -163,7 +191,7 @@ chart = (
     .encode(
         x=alt.X("Valor:N", title="Categoría", sort="-y"),
         y=alt.Y("Frecuencia:Q", title="Frecuencia"),
-        color=alt.Color("Variable:N", title="Variable/Atributo", scale=alt.Scale(scheme="tableau10")),
+        color=alt.Color("Variable:N", title="Variable/Atributo", scale=alt.Scale(range=COLORES_BARRAS)),
         xOffset="Variable:N",
         tooltip=["Variable", "Valor", "Frecuencia"],
     )
@@ -177,15 +205,24 @@ df_donut = df_tr.copy()
 df_donut["Categoria_Combinada"] = df_donut["Tipo_reaccion"] + " (" + df_donut["Medio"] + ")"
 df_grouped = df_donut.groupby("Categoria_Combinada", as_index=False)["TR"].sum()
 
+# Máximo 5 sectores: los 4 grupos de mayor TR y el resto sumado en "Otros"
+if len(df_grouped) > 5:
+    df_grouped = df_grouped.sort_values("TR", ascending=False).reset_index(drop=True)
+    top = df_grouped.loc[:3, "Categoria_Combinada"].tolist()
+    df_grouped["Categoria_Combinada"] = df_grouped["Categoria_Combinada"].where(
+        df_grouped["Categoria_Combinada"].isin(top), "Otros")
+    df_grouped = df_grouped.groupby("Categoria_Combinada", as_index=False)["TR"].sum()
+
 grafico_altair = (
     alt.Chart(df_grouped)
     .mark_arc(innerRadius=60, outerRadius=100)
     .encode(
         theta=alt.Theta(field="TR", type="quantitative", title="Suma de TR"),
-        color=alt.Color(field="Categoria_Combinada", type="nominal", title="Grupo (Reacción, Medio)"),
+        color=alt.Color(field="Categoria_Combinada", type="nominal", title="Grupo (Reacción, Medio)",
+                        scale=alt.Scale(range=COLORES_DONA)),
         tooltip=["Categoria_Combinada", "TR"],
     )
-    .properties(title="Distribución de TR por Grupo (Reacción, Medio)", width=350, height=350)
+    .properties(title="Distribución de TR por Grupo (máx. 5)", width=350, height=350)
     .interactive()
 )
 guardar_altair("10_dona_TR_grupo", grafico_altair)
@@ -214,7 +251,7 @@ datos_px["Puentes de H"] = datos_px["Compuesto"].map(lambda c: CLASIFICACION[c][
 etiquetas = {"PM(g/mol)": "Peso molecular (g/mol)", "P.eb(°C)": "Punto de ebullición (°C)",
              "pf(°C)": "Punto de fusión (°C)", "Momento_dipolar": "Momento dipolar (D)",
              "Densidad(g/cm3)": "Densidad (g/cm³)", "S(g/L)": "Solubilidad (g/L)"}
-hover = {"PM(g/mol)": True, "P.eb(°C)": True, "pf(°C)": True, "Densidad(g/cm3)": True,
+hover = {"PM(g/mol)": True, "P.eb(°C)": True, "pf(°C)": True, "Densidad(g/cm3)": True, "Pv(Pas)": True,
          "pKa": True, "Momento_dipolar": True, "S(g/L)": True}
 
 
@@ -278,20 +315,29 @@ fig.update_xaxes(range=[15, 200])
 fig.update_yaxes(range=[-70, 450])
 guardar_plotly("11_plotly_burbujas_pm_peb", fig)
 
-# 12. 3D: PM, P.eb y momento dipolar por grupo funcional
-tres_d = datos_px.dropna(subset=["PM(g/mol)", "P.eb(°C)", "Momento_dipolar"])
-fig = px.scatter_3d(tres_d, x="PM(g/mol)", y="Momento_dipolar", z="P.eb(°C)", color="Grupo funcional",
-                    hover_name="Compuesto", hover_data=hover,
-                    labels={"PM(g/mol)": "PM (g/mol)", "Momento_dipolar": "μ (D)", "P.eb(°C)": "P.eb (°C)"},
-                    title="PM, momento dipolar y punto de ebullición")
-fig.update_traces(marker=dict(size=6, line=dict(width=1, color="DarkSlateGrey")))
-fig.update_layout(scene=dict(camera=dict(eye=dict(x=1.6, y=-1.6, z=0.75), center=dict(x=0, y=0, z=-0.08)),
-                             domain=dict(x=[0, 1], y=[0.2, 1]),
-                             xaxis=dict(title_font_size=14, tickfont_size=11),
-                             yaxis=dict(title_font_size=14, tickfont_size=11),
-                             zaxis=dict(title_font_size=14, tickfont_size=11)))
-fig.update_layout(legend=dict(orientation="h", yanchor="bottom", y=0, xanchor="center", x=0.5))
-guardar_plotly("12_plotly_3d_pm_dipolo_peb", fig, alto=560)
+# 12. PM vs momento dipolar; el color codifica el punto de ebullición.
+#     Reemplaza a la antigua gráfica 3D: las tres variables se leen en un plano,
+#     sin perspectiva, y la forma del marcador separa aminas de amidas.
+plano = datos_px.dropna(subset=["PM(g/mol)", "P.eb(°C)", "Momento_dipolar"]).copy()
+plano["Familia"] = plano["Grupo funcional"].str.split().str[0].replace({"Urea": "Amida"})
+fig = px.scatter(plano, x="PM(g/mol)", y="Momento_dipolar", color="P.eb(°C)", symbol="Familia",
+                 symbol_map={"Amina": "circle", "Amida": "diamond"},
+                 color_continuous_scale="YlOrBr", hover_name="Compuesto", hover_data=hover,
+                 labels={"PM(g/mol)": "Peso molecular (g/mol)", "Momento_dipolar": "Momento dipolar (D)",
+                         "P.eb(°C)": "P.eb (°C)"},
+                 title="PM vs momento dipolar (color = punto de ebullición)")
+fig.update_traces(marker=dict(size=16, line=dict(width=1.2, color="#5A3A1A")))
+etiquetar(fig, plano, "PM(g/mol)", "Momento_dipolar", {
+    "Metilamina": (-10, -40), "Dimetilamina": (-25, 45), "Trimetilamina": (85, 25),
+    "N-metiletanamina": (60, -40), "N-isopropil-N-metilpropan-2amina": (20, -60),
+    "Bencidina": (-40, -35), "Acetamida": (-50, -30), "N-metilacetamida": (-60, 25),
+    "N,N-dimetilacetamida": (65, 30), "Urea": (40, -35),
+})
+fig.update_layout(coloraxis_colorbar=dict(title="P.eb<br>(°C)", thickness=14, len=0.75),
+                  legend=dict(title="", orientation="h", yanchor="top", y=-0.17, xanchor="center", x=0.5))
+fig.update_xaxes(range=[15, 200])
+fig.update_yaxes(range=[0, 5.3])
+guardar_plotly("12_plotly_pm_dipolo_peb", fig)
 
 # 13. Densidad vs solubilidad (escala logarítmica: la solubilidad abarca varios órdenes)
 dens_sol = datos_px.dropna(subset=["Densidad(g/cm3)", "S(g/L)"])

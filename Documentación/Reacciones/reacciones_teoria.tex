@@ -1,0 +1,108 @@
+% =====================================================================
+%  REACTIVIDAD DE AMINAS Y AMIDAS (marco teórico)
+%  Se incluye desde main.tex justo después de la parte de Sara, así que
+%  estas subsecciones continúan la sección "Marco Teórico".
+%
+%  Reglas: fórmulas con \ce{...} (mhchem), citas con \cite{clave} y sin
+%  \documentclass ni \begin{document}.
+% =====================================================================
+
+% Ecuaciones químicas al 80 % del tamaño: a 12 pt no caben en una columna
+\providecommand{\reac}[1]{\scalebox{0.8}{$\ce{#1}$}}
+
+\subsection{Estructura y propiedades: basicidad frente a resonancia}
+\label{sec:estructura}
+Aminas y amidas comparten el átomo de nitrógeno con un par de electrones
+libre, pero lo usan de forma muy distinta. En una amina el nitrógeno tiene
+hibridación aproximadamente $sp^3$ y su par libre está disponible para
+aceptar un protón, por lo que las aminas son bases débiles y buenos
+nucleófilos \cite{wade2017}:
+\begin{equation}
+	\reac{RNH2 + H2O <=> RNH3+ + OH-}
+\end{equation}
+Las aminas alifáticas estudiadas tienen un pKa del ácido conjugado cercano
+a 10--11 (metilamina 10,6; dimetilamina 10,8), mientras que en la bencidina
+el par libre se deslocaliza sobre los anillos aromáticos y el valor cae a
+4,7. En la amida, en cambio, el par libre del nitrógeno entra en resonancia
+con el grupo carbonilo:
+\begin{equation}
+	\reac{R-C(=O)-NH2 <-> R-C(-O^-)=NH2+}
+\end{equation}
+Esa deslocalización hace que el enlace C--N tenga carácter parcial de doble
+enlace (grupo plano, con rotación restringida), que el nitrógeno casi no sea
+básico y que la molécula sea muy polar. Por eso las amidas presentan
+momentos dipolares altos (3,7--4,6~D en la base de datos, frente a
+0,6--1,4~D en las aminas) y son mucho más estables
+termodinámicamente que los demás derivados de ácidos carboxílicos
+\cite{clayden2012}. El pKa que CAS-SciFinder reporta para las amidas
+(14--35) corresponde a la acidez del enlace N--H y no a la de un ácido
+conjugado, por lo que no se compara directamente con el de las aminas.
+
+\subsection{Reacciones clave de las aminas}
+\label{sec:reac-aminas}
+\textbf{Alquilación.} El par libre ataca a un haluro de alquilo en una
+sustitución nucleofílica ($S_N2$). La amina producto sigue siendo
+nucleófila y vuelve a reaccionar, de modo que se obtiene una mezcla de
+aminas cada vez más sustituidas \cite{mcmurry2016}:
+\begin{equation}
+	\reac{CH3NH2 + CH3I -> (CH3)2NH2+ I-}
+\end{equation}
+
+\textbf{Formación de sales de amonio cuaternario.} Al agotar los hidrógenos
+del nitrógeno, la amina terciaria se alquila una última vez y forma una sal
+de amonio cuaternario, que ya no tiene par libre y no es básica:
+\begin{equation}
+	\reac{(CH3)3N + CH3I -> (CH3)4N+ I-}
+\end{equation}
+
+\textbf{Acilación.} Las aminas primarias y secundarias atacan el carbonilo
+de cloruros o anhídridos de ácido (sustitución nucleofílica en el acilo) y
+forman amidas. Así se conectan las dos familias del trabajo: la metilamina
+acilada da N-metilacetamida.
+\begin{equation}
+	\reac{CH3NH2 + CH3COCl -> CH3CONHCH3 + HCl}
+\end{equation}
+Las aminas terciarias no tienen hidrógeno sobre el nitrógeno y no forman
+amidas estables.
+
+\textbf{Reacción con ácido nitroso.} El ácido nitroso se genera en el medio
+a partir de \ce{NaNO2} y HCl a 0--5\,\si{\degreeCelsius}. Las aminas
+primarias forman sales de diazonio; las alifáticas se descomponen liberando
+\ce{N2}, mientras que las aromáticas, como la bencidina, dan diazonios
+estables que se usan para sintetizar colorantes azoicos:
+\begin{equation}
+	\reac{ArNH2 + HNO2 + HCl -> ArN2+ Cl- + 2H2O}
+\end{equation}
+Las aminas secundarias forman N-nitrosaminas, compuestos cancerígenos de
+interés ambiental (p.\,ej. la N-nitrosodimetilamina en aguas tratadas):
+\begin{equation}
+	\reac{(CH3)2NH + HNO2 -> (CH3)2N-N=O + H2O}
+\end{equation}
+Las aminas terciarias alifáticas sólo forman sales solubles.
+
+\subsection{Reacciones clave de las amidas}
+\label{sec:reac-amidas}
+\textbf{Hidrólisis ácida y básica.} Por la estabilización por resonancia, la
+hidrólisis de una amida exige calentamiento prolongado con ácido o base
+concentrados \cite{wade2017}. En medio ácido se protona el oxígeno del
+carbonilo y se libera ion amonio; en medio básico el \ce{OH-} ataca el
+carbonilo y se libera la amina o el amoníaco:
+\begin{gather}
+	\reac{CH3CONH2 + H3O+ ->[\Delta] CH3COOH + NH4+}\\
+	\reac{CH3CONH2 + OH- ->[\Delta] CH3COO- + NH3}
+\end{gather}
+En el ambiente la hidrólisis de la urea ocurre en minutos gracias a la
+enzima ureasa, paso clave del ciclo del nitrógeno en suelos fertilizados:
+\begin{equation}
+	\reac{(NH2)2CO + H2O -> 2NH3 + CO2}
+\end{equation}
+
+\textbf{Síntesis a partir de ácidos carboxílicos y aminas.} Al mezclar el
+ácido y la amina se forma primero una sal de amonio (reacción ácido--base);
+la amida sólo aparece al calentar por encima de 100\,\si{\degreeCelsius}
+para eliminar agua, o al activar el ácido como cloruro de acilo o con un
+agente de acoplamiento \cite{clayden2012}:
+\begin{gather}
+	\reac{CH3COOH + CH3NH2 -> CH3COO- \; CH3NH3+}\\
+	\reac{CH3COO- \; CH3NH3+ ->[\Delta][- H2O] CH3CONHCH3}
+\end{gather}
