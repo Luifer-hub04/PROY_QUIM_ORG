@@ -3,9 +3,9 @@
   "name": "g7_dona_tiempo",
   "position": {
     "x": 940,
-    "y": 400,
+    "y": 420,
     "z": 7000,
-    "height": 310,
+    "height": 270,
     "width": 330,
     "tabOrder": 7000
   },
@@ -59,7 +59,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#9C6A33'"
+                      "Value": "'#B48B63'"
                     }
                   }
                 }
@@ -100,7 +100,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3E6E7E'"
+                      "Value": "'#6B8E9B'"
                     }
                   }
                 }
@@ -141,7 +141,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#D9A441'"
+                      "Value": "'#D6BC7E'"
                     }
                   }
                 }
@@ -182,7 +182,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B5564B'"
+                      "Value": "'#B98276'"
                     }
                   }
                 }
@@ -233,6 +233,13 @@
                   "Value": "'Percent of total'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
             }
           }
         }
@@ -250,7 +257,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bottom'"
+                  "Value": "'Right'"
                 }
               }
             },

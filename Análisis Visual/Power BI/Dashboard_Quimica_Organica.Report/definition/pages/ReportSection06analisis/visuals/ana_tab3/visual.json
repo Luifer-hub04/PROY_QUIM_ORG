@@ -21,7 +21,11 @@
                   "Value": "false"
                 }
               }
-            },
+            }
+          }
+        },
+        {
+          "properties": {
             "shapeType": {
               "expr": {
                 "Literal": {
@@ -44,7 +48,11 @@
                   "Value": "true"
                 }
               }
-            },
+            }
+          }
+        },
+        {
+          "properties": {
             "text": {
               "expr": {
                 "Literal": {
@@ -99,13 +107,17 @@
                   "Value": "true"
                 }
               }
-            },
+            }
+          }
+        },
+        {
+          "properties": {
             "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7570B3'"
+                      "Value": "'#8D84AE'"
                     }
                   }
                 }
@@ -133,13 +145,17 @@
                   "Value": "false"
                 }
               }
-            },
+            }
+          }
+        },
+        {
+          "properties": {
             "lineColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7570B3'"
+                      "Value": "'#8D84AE'"
                     }
                   }
                 }
