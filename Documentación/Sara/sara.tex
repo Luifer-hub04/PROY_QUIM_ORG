@@ -11,41 +11,106 @@
 
 \section{Introducción}
 \fontsize{12}{14}\selectfont
-% TODO (Sara): pegar aquí la redacción de la introducción.
-% Sugerencia de hilo argumentativo:
-%  1. Importancia de los compuestos nitrogenados (aminas y amidas) en química
-%     orgánica, biología y en el ambiente.
-%  2. Problema: cómo la estructura (grado de sustitución del N, grupo carbonilo,
-%     capacidad de formar puentes de hidrógeno) determina las propiedades físicas.
-%  3. Objetivo del trabajo: relacionar estadísticamente propiedades obtenidas en
-%     CAS-SciFinder (PM, pf, P.eb, densidad, pKa, momento dipolar, solubilidad).
-\textit{[Redacción de la introducción pendiente.]}
+El estudio de la relación estructura--propiedad en compuestos orgánicos resulta
+fundamental para comprender su comportamiento macroscópico, reactividad y
+aplicaciones en diversos campos de la química y la ingeniería ambiental. En
+particular, las aminas y las amidas representan dos familias nitrogenadas de gran
+relevancia industrial y biológica, cuyas propiedades fisicoquímicas ---tales como
+el punto de ebullición, el punto de fusión, la densidad y la solubilidad--- están
+fuertemente condicionadas por la naturaleza de sus fuerzas intermoleculares, la
+capacidad de formar puentes de hidrógeno y la polaridad molecular.
 
-Los datos de partida se obtuvieron de CAS-SciFinder \cite{1_Su2022}.
-% (Reemplazar esta cita de ejemplo por la referencia real de CAS-SciFinder.)
+Para llevar a cabo este análisis, se consolidó una base de datos mediante una
+búsqueda exhaustiva de información en la plataforma especializada CAS-SciFinder
+\cite{1_Su2022}. A partir de este levantamiento, los datos fisicoquímicos y
+estructurales de los compuestos seleccionados fueron organizados, codificados y
+tabulados sistemáticamente. Este procedimiento permitió estructurar un conjunto de
+datos homogéneo, orientado a la evaluación estadística de correlaciones entre
+variables y a la caracterización del impacto que ejercen los grupos funcionales y
+la geometría molecular sobre sus propiedades fisicoquímicas.
 
 \section{Marco Teórico}
 \fontsize{12}{14}\selectfont
-% TODO (Sara): pegar aquí la redacción del marco teórico.
-% Temas sugeridos:
-%  * Aminas primarias, secundarias y terciarias: \ce{CH3NH2}, \ce{(CH3)2NH}, \ce{(CH3)3N}.
-%  * Amidas: acetamida, N-metilacetamida, N,N-dimetilacetamida, urea.
-%  * Fuerzas intermoleculares: puentes de hidrógeno N--H$\cdots$N y N--H$\cdots$O,
-%    dipolo--dipolo y dispersión de London.
-%  * Basicidad (pKa del ácido conjugado) y efecto de la resonancia en amidas.
 
 \subsection{Fuerzas intermoleculares}
-\textit{[Redacción pendiente.]}
+Las propiedades fisicoquímicas macroscópicas de las aminas y amidas ---tales como
+los puntos de ebullición, los puntos de fusión y la solubilidad--- están
+gobernadas principalmente por la naturaleza y la intensidad de las fuerzas
+intermoleculares que actúan entre sus moléculas. A diferencia de los enlaces
+intramoleculares (covalentes), estas interacciones no covalentes determinan la
+energía térmica necesaria para alterar el estado de agregación de la materia. En
+las familias nitrogenadas objeto de estudio destacan tres tipos principales de
+fuerzas intermoleculares \cite{wade2017}:
+
+\begin{itemize}
+	\item \textbf{Fuerzas de dispersión de London:} son interacciones débiles de
+	carácter electrostático que surgen a partir de fluctuaciones temporales en la
+	densidad de la nube electrónica de las moléculas, generando dipolos
+	instantáneos e inducidos. Aunque individualmente son de baja energía, su
+	contribución se vuelve acumulativamente significativa en compuestos con mayor
+	peso molecular o con estructuras voluminosas y sistemas aromáticos extendidos
+	(como ocurre en la bencidina).
+	\item \textbf{Interacciones dipolo--dipolo:} se originan debido a la diferencia
+	de electronegatividad entre los átomos que conforman los grupos funcionales,
+	destacando la polarización del enlace carbono--nitrógeno (\ce{C-N}) y, de
+	manera muy pronunciada, del grupo carbonilo (\ce{C=O}) presente en las amidas.
+	Estas fuerzas electrostáticas permanentes alinean las moléculas en estado
+	líquido o sólido, incrementando la cohesión interna y elevando los puntos de
+	fusión y ebullición en comparación con hidrocarburos de masa molar
+	equivalente.
+	\item \textbf{Puentes de hidrógeno:} representan una variante altamente
+	direccional y fuerte de la interacción dipolo--dipolo, la cual se manifiesta
+	cuando un átomo de hidrógeno está unido covalentemente a un átomo
+	electronegativo como el nitrógeno (\ce{N-H}). Las aminas primarias y
+	secundarias, al igual que las amidas, poseen hidrógenos unidos al nitrógeno,
+	lo que les permite actuar simultáneamente como donadoras y aceptoras de
+	puentes de hidrógeno. Esto genera redes intermoleculares robustas que explican
+	sus elevados puntos de ebullición. En contraste, las aminas terciarias carecen
+	de enlaces \ce{N-H}, por lo que actúan exclusivamente como aceptoras,
+	impidiendo la formación de dichas redes intermoleculares tridimensionales y
+	reduciendo notablemente sus puntos de ebullición frente a isómeros primarios o
+	secundarios de peso molecular similar.
+\end{itemize}
 
 \subsection{Basicidad y resonancia}
-\textit{[Redacción pendiente.]}
+La basicidad de los compuestos nitrogenados está íntimamente ligada a la
+disponibilidad del par de electrones no enlazante (par solitario) ubicado en el
+átomo de nitrógeno para aceptar un protón (\ce{H+}). En las aminas, este par
+solitario confiere un carácter básico característico; sin embargo, la magnitud de
+dicha basicidad varía de manera sustancial en función de la estructura molecular,
+la sustitución y los efectos electrónicos \cite{clayden2012}:
+
+\begin{itemize}
+	\item \textbf{Efecto inductivo en aminas alifáticas:} los grupos alquilo unidos
+	al nitrógeno actúan como grupos dadores de densidad electrónica mediante el
+	efecto inductivo (+I). Esto incrementa la densidad electrónica sobre el
+	nitrógeno y estabiliza el ion amonio conjugado resultante, elevando la
+	basicidad de las aminas alifáticas primarias, secundarias y terciarias en
+	comparación con el amoníaco. No obstante, en disolución acuosa la basicidad
+	real también se ve modulada por el impedimento estérico y la capacidad de
+	solvatación del ion protonado.
+	\item \textbf{Deslocalización por resonancia en aminas aromáticas:} en las
+	aminas aromáticas, el par libre del nitrógeno se encuentra en conjugación
+	directa con el sistema $\pi$ del anillo aromático. A través de estructuras de
+	resonancia, la densidad electrónica del nitrógeno se deslocaliza hacia la
+	estructura anular, lo que disminuye notablemente la disponibilidad de dicho par
+	electrónico para captar un protón, reduciendo de forma drástica la basicidad en
+	comparación con las aminas alifáticas.
+	\item \textbf{Efecto de resonancia en amidas:} las amidas exhiben una basicidad
+	extremadamente baja (prácticamente neutras en disolución acuosa) frente a las
+	aminas. Esto ocurre porque el par solitario del nitrógeno participa en una
+	fuerte resonancia con el grupo carbonilo adyacente (\ce{C=O}). Esta
+	deslocalización confiere al enlace carbono--nitrógeno un carácter parcial de
+	doble enlace y desvía la densidad electrónica hacia el átomo de oxígeno, lo que
+	desfavorece la protonación en el nitrógeno y estabiliza fuertemente el sistema
+	molecular.
+\end{itemize}
 
 \subsection{Tabla de datos de propiedades químicas}
 \label{sec:tabla}
-% TODO (Sara): completar la tabla con los valores definitivos del Excel
-% (Datos/datos_power_bi.xlsx). Una fila por compuesto; usar "--" si falta el dato.
 La Tabla~\ref{tab:propiedades} resume las propiedades fisicoquímicas de los
-compuestos estudiados, consolidadas desde CAS-SciFinder.
+compuestos estudiados, consolidadas desde CAS-SciFinder (valores promedio de la
+base de datos limpia; ``--'' indica dato no reportado).
 
 \begin{table}[htbp]
 	\centering
@@ -58,15 +123,15 @@ compuestos estudiados, consolidadas desde CAS-SciFinder.
 			\textbf{Compuesto} & \textbf{PM} & \textbf{pf} & \textbf{P.eb} & \textbf{$\rho$} & \textbf{pKa} \\
 			 & (\si{\gram\per\mole}) & (\si{\degreeCelsius}) & (\si{\degreeCelsius}) & (\si{\gram\per\centi\metre\cubed}) & \\
 			\midrule
-			Metilamina            & -- & -- & -- & -- & -- \\
-			Dimetilamina          & -- & -- & -- & -- & -- \\
-			Trimetilamina         & -- & -- & -- & -- & -- \\
-			N-metiletanamina      & -- & -- & -- & -- & -- \\
-			Bencidina             & -- & -- & -- & -- & -- \\
-			Acetamida             & -- & -- & -- & -- & -- \\
-			N-metilacetamida      & -- & -- & -- & -- & -- \\
-			N,N-dimetilacetamida  & -- & -- & -- & -- & -- \\
-			Urea                  & -- & -- & -- & -- & -- \\
+			Metilamina            & \num{31.06}  & \num{-93.5}  & \num{-6.3}  & \num{0.66} & \num{10.63} \\
+			Dimetilamina          & \num{45.08}  & \num{-92.2}  & \num{6.8}   & \num{0.68} & \num{10.77} \\
+			Trimetilamina         & \num{59.11}  & \num{-117.1} & \num{2.8}   & \num{0.63} & \num{9.14}  \\
+			N-metiletanamina      & \num{59.11}  & --           & \num{36.5}  & \num{0.68} & \num{10.54} \\
+			Bencidina             & \num{184.24} & \num{120.0}  & \num{401.0} & \num{1.25} & \num{4.70}  \\
+			Acetamida             & \num{59.07}  & \num{81.0}   & \num{222.0} & \num{1.16} & \num{25.50} \\
+			N-metilacetamida      & \num{73.09}  & \num{28.0}   & \num{205.0} & \num{0.94} & \num{25.90} \\
+			N,N-dimetilacetamida  & \num{87.12}  & \num{-18.6}  & \num{164.0} & \num{0.94} & \num{35.00} \\
+			Urea                  & \num{60.06}  & \num{132.7}  & \num{165.1} & \num{1.32} & \num{14.43} \\
 			\bottomrule
 		\end{tabular}%
 	}

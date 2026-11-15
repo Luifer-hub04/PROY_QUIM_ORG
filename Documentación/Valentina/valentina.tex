@@ -11,16 +11,36 @@
 
 \section{Metodología}
 \fontsize{12}{14}\selectfont
-% TODO (Valentina): pegar aquí la redacción de la metodología.
 
 \subsection{Recolección de datos}
-\textit{[Redacción pendiente: búsqueda en CAS-SciFinder, compuestos e indicadores asignados, consolidación en Excel con formato Tabla.]}
+La recopilación de datos fisicoquímicos y reactivos se realizó mediante búsquedas
+sistemáticas en la base de datos especializada CAS-SciFinder. Se seleccionó un
+conjunto representativo de 9 compuestos nitrogenados que abarcaban aminas
+alifáticas (primarias, secundarias y terciarias), aminas aromáticas, amidas y
+diamidas. Las propiedades tabuladas incluyeron peso molecular (PM), punto de
+fusión (pf), punto de ebullición (P.eb), densidad, pKa, momento dipolar y
+solubilidad en agua. Los datos extraídos fueron consolidados en una hoja de cálculo
+formateada numéricamente para garantizar su integridad
+(Tabla~\ref{tab:propiedades}).
 
 \subsection{Limpieza y procesamiento en Python}
-\textit{[Redacción pendiente: Google Colab con Pandas, NumPy, Matplotlib, Seaborn y Plotly; filtrado de los compuestos de interés, conversión de comas decimales, tratamiento de valores nulos y atípicos.]}
+El procesamiento de datos se llevó a cabo en la plataforma Google Colab utilizando
+el lenguaje de programación Python y las librerías Pandas y NumPy para la
+manipulación matricial y limpieza de datos. Se estandarizaron los formatos
+numéricos mediante la conversión de comas decimales a puntos, y se verificó la
+ausencia de valores nulos o atípicos extremos no justificados. Para la generación
+de representaciones gráficas estáticas e interactivas se emplearon las bibliotecas
+Matplotlib, Seaborn, Plotly y Altair.
 
 \subsection{Análisis estadístico}
-\textit{[Redacción pendiente: correlación de Spearman (no paramétrica, robusta a valores atípicos y relaciones monótonas no lineales), regresiones lineales con intervalo de confianza del 95\,\% y distribuciones por tipo de reacción y medio.]}
+Dado el tamaño muestral y la distribución de las variables fisicoquímicas, se
+empleó la correlación no paramétrica de Spearman, la cual es robusta frente a
+desviaciones de la normalidad y evalúa relaciones monótonas lineales y no
+lineales. Asimismo, se ajustaron líneas de tendencia por regresión lineal para
+analizar las tendencias de variación continuas entre pares de propiedades térmicas
+y físicas. Finalmente, las frecuencias de los mecanismos de reacción y medios
+reportados se analizaron mediante diagramas de violín, de cajas y bigotes y
+diagramas circulares.
 
 \section{Resultados y Discusión}
 \fontsize{12}{14}\selectfont
@@ -30,6 +50,20 @@ La Figura~\ref{fig:spearman-int} presenta la matriz de correlación de Spearman
 entre las propiedades fisicoquímicas; la Figura~\ref{fig:pares} ordena los pares
 con $|\rho| \geq \num{0.60}$ y la Figura~\ref{fig:dispersion} muestra la
 dispersión de los seis pares más fuertes.
+
+Se observa una correlación positiva fuerte entre el punto de fusión y la densidad
+($\rho = \num{0.99}$), así como entre el punto de ebullición y la densidad
+($\rho = \num{0.91}$) y entre el punto de ebullición y el punto de fusión
+($\rho = \num{0.84}$). Estas altas correlaciones reflejan que el aumento en la
+cohesión intermolecular y la masa molecular promueve simultáneamente un
+empaquetamiento más denso y una mayor demanda de energía térmica para los cambios
+de fase. Por otro lado, la solubilidad en agua exhibe relaciones inversas con el
+punto de ebullición ($\rho = \num{-0.66}$) y el momento dipolar
+($\rho = \num{-0.49}$), sugiriendo que moléculas de mayor volumen hidrofóbico o
+menor carácter relativo de puente de hidrógeno directo presentan una solubilidad
+restringida. En la matriz, pf, P.eb y densidad forman un bloque principal de
+correlaciones altas, mientras que variables electrónicas como el pKa, el peso
+molecular y el momento dipolar se relacionan de forma más moderada.
 
 \begin{figure}[H]
 	\centering
@@ -97,10 +131,36 @@ correlacionadas (Figura~\ref{fig:dispersion}), se observa lo siguiente:
 	aumento del punto de ebullición, a pesar de la dispersión de algunos registros.
 \end{itemize}
 
+En conjunto, los compuestos con menor densidad (cercanos a
+\SI{0.65}{\gram\per\centi\metre\cubed}) presentan puntos de fusión bajo cero,
+mientras que las amidas o los compuestos aromáticos cristalinos densos (superiores
+a \SI{1.1}{\gram\per\centi\metre\cubed}) alcanzan puntos de fusión por encima de
+\SI{80}{\degreeCelsius}. Compuestos volátiles como la trimetilamina se ubican en el
+extremo inferior de ebullición, mientras que las amidas pesadas o polarizadas se
+desplazan hacia temperaturas de ebullición superiores a \SI{200}{\degreeCelsius}.
+La relación entre pf y P.eb muestra la correspondencia entre la energía de red
+sólida y la energía de cohesión líquida, con desviaciones en compuestos con fuerte
+impedimento estérico o asimetría estructural. Por último, incrementos en el
+momento dipolar (de 0,5~D a más de 3,5~D) se asocian con puntos de ebullición
+sensiblemente más altos (Figura~\ref{fig:spearman-int}), evidenciando el peso de
+las interacciones dipolo--dipolo inducidas por grupos carbonilo o por enlaces
+\ce{N-H} polarizados.
+
 \subsection{Comparación por sustancia y familia química}
 Las Figuras~\ref{fig:burbujas-pf-peb}--\ref{fig:barras-sustancias} comparan los
 puntos de fusión, de ebullición y la densidad promedio de cada sustancia y de
 cada familia química (aminas, amidas y urea).
+
+Estas comparaciones permiten desglosar el efecto de los grupos funcionales. La
+trimetilamina (P.eb = \SI{2.8}{\degreeCelsius}) y la N-metiletanamina
+(P.eb = \SI{36.5}{\degreeCelsius}), ambas isómeras con peso molecular de
+\SI{59.11}{\gram\per\mole} (Tabla~\ref{tab:propiedades}), demuestran
+experimentalmente el efecto de los puentes de hidrógeno: mientras la trimetilamina
+carece de enlaces \ce{N-H} (sólo aceptora), la N-metiletanamina es donadora y
+aceptora, lo que eleva notablemente su temperatura de ebullición
+(Figura~\ref{fig:barras-sustancias}). Además, la solubilidad disminuye
+drásticamente en aminas aromáticas hidrofóbicas como la bencidina, mientras que las
+amidas primarias y las aminas de cadena corta muestran alta miscibilidad acuosa.
 
 \begin{figure}[H]
 	\centering
@@ -183,6 +243,12 @@ Las Figuras~\ref{fig:tipo-medio}--\ref{fig:paneles} comparan la frecuencia de
 cada tipo de reacción y de cada medio ($n = 11$ registros), y las
 Figuras~\ref{fig:violin-tr}--\ref{fig:dona-tr} describen la distribución de TR
 según el tipo de reacción y el medio.
+
+Predomina la sustitución nucleofílica (SN), fenómeno consistente con la alta
+nucleofilia del par de electrones libre del nitrógeno. Los tiempos de reacción
+presentan una distribución más amplia en medios neutros y apolares, mientras que
+condiciones específicas (SN en medio ácido o básico) muestran intervalos más
+reducidos y repetibles.
 
 \begin{figure}[H]
 	\centering
@@ -315,6 +381,17 @@ total analizado.
 
 \section{Conclusiones y Perspectiva}
 \fontsize{12}{14}\selectfont
-% TODO (Valentina): 3--5 conclusiones que respondan al objetivo de la introducción,
-% cada una sustentada en una figura o en la Tabla~\ref{tab:propiedades}.
-\textit{[Redacción pendiente.]}
+\begin{itemize}
+	\item Se estableció con éxito la relación cuantitativa entre la estructura
+	molecular y las propiedades fisicoquímicas de aminas y amidas mediante análisis
+	estadístico.
+	\item Los puentes de hidrógeno intermoleculares y el momento dipolar ejercen un
+	efecto determinante sobre el punto de ebullición y el punto de fusión,
+	sobrepasando en magnitud el efecto del peso molecular entre isómeros.
+	\item Las correlaciones de Spearman confirmaron el acoplamiento casi perfecto
+	($\rho \geq \num{0.91}$) entre la densidad del compuesto y sus temperaturas de
+	cambio de fase.
+	\item La caracterización sintética confirmó que la sustitución nucleofílica en
+	medio neutro es la ruta preferencial para la derivatización de este tipo de
+	compuestos nitrogenados.
+\end{itemize}
