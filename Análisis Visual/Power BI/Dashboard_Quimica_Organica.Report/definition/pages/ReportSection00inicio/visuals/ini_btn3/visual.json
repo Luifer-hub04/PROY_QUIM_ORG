@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ini_btn3",
   "position": {
-    "x": 484,
+    "x": 550,
     "y": 590,
     "z": 2000,
     "height": 56,
-    "width": 150,
+    "width": 172,
     "tabOrder": 9000
   },
   "visual": {

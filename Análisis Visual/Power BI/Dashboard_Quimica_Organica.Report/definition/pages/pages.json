@@ -1,6 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
   "pageOrder": [
+    "ReportSection000portada",
     "ReportSection00inicio",
     "ReportSection01panorama",
     "ReportSection02propiedades",
@@ -8,8 +9,7 @@
     "ReportSection04aminas",
     "ReportSection05amidas",
     "ReportSection06analisis",
-    "ReportSection07graficasv2",
     "ReportSection08conclusiones"
   ],
-  "activePageName": "ReportSection00inicio"
+  "activePageName": "ReportSection000portada"
 }

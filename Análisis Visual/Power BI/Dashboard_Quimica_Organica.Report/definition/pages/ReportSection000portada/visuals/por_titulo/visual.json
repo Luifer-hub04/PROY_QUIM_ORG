@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "por_titulo",
+  "position": {
+    "x": 90,
+    "y": 70,
+    "z": 1000,
+    "height": 300,
+    "width": 1100,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "PROYECTO FINAL DE QUÍMICA ORGÁNICA · ARTÍCULO DE INVESTIGACIÓN",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#C08A5B",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#1F3B57"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dashboard Interactivo: Cinética, Mecanismos y Análisis de Reacciones de Aminas y Amidas",
+                    "textStyle": {
+                      "fontSize": "30pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#1F3B57"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Relación estructura–propiedad y reactividad de compuestos nitrogenados con datos de CAS-SciFinder",
+                    "textStyle": {
+                      "fontSize": "15pt",
+                      "color": "#5A6B7B"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

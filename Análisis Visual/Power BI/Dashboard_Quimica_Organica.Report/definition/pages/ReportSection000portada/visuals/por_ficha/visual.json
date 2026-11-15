@@ -1,0 +1,217 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "por_ficha",
+  "position": {
+    "x": 240,
+    "y": 390,
+    "z": 1100,
+    "height": 220,
+    "width": 800,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Integrantes:  ",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "Sara Lozano · Valentina Fraile Gómez · Luisa Gómez",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Asignatura:  ",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "Química Orgánica · QUIMORG 2026-III",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Programa:  ",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "Ingeniería Ambiental · Facultad del Medio Ambiente y Recursos Naturales",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Institución:  ",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "Universidad Distrital Francisco José de Caldas · Bogotá, Colombia",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Herramienta:  ",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "Microsoft Power BI Desktop (marcadores, segmentadores y KPI)",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Fecha de entrega:  ",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "Noviembre de 2026",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9DEE5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -93,8 +93,8 @@ pdflatex main.tex
 
 | Integrante | Responsabilidad |
 |---|---|
-| Sara [Apellido] | Introducción, Marco Teórico, Tabla de datos |
-| Valentina [Apellido] | Metodología, Análisis gráfico, Conclusiones |
+| Sara Lozano | Introducción, Marco Teórico, Tabla de datos |
+| Valentina Fraile Gómez | Metodología, Análisis gráfico, Conclusiones |
 | Luisa Gomez | CAS-SciFinder, Power BI, Repositorio |
 
 ---

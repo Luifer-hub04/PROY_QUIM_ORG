@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "ini_btn6",
+  "name": "por_btn_comenzar",
   "position": {
-    "x": 958,
-    "y": 590,
-    "z": 2900,
+    "x": 540,
+    "y": 635,
+    "z": 2000,
     "height": 56,
-    "width": 150,
-    "tabOrder": 2900
+    "width": 200,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'7. Gráficas Colab'"
+                  "Value": "'Comenzar  ▸'"
                 }
               }
             },
@@ -74,7 +74,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "13D"
                 }
               }
             },
@@ -219,7 +219,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'ReportSection07graficasv2'"
+                  "Value": "'ReportSection00inicio'"
                 }
               }
             }

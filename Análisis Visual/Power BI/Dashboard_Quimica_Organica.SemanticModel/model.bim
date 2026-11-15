@@ -581,13 +581,6 @@
             ],
             "formatString": "0.0%",
             "lineageTag": "1167cfc7-7e1a-42aa-984b-22f71332a7de"
-          },
-          {
-            "name": "Tiempo total (h)",
-            "description": "Suma del tiempo de reacción reportado (equivale a 'TR' en Colab).",
-            "expression": "SUM ( Reacciones[Tiempo (h)] )",
-            "formatString": "0.0",
-            "lineageTag": "88d8e09b-ec93-4962-8290-3b9745172117"
           }
         ],
         "partitions": [
