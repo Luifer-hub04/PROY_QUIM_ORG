@@ -261,7 +261,9 @@ fig_burbujas = px.scatter(
         "P.eb(°C)": "Punto de ebullición promedio (°C)",
         "Densidad(g/cm3)": "Densidad promedio (g/cm³)"
     },
-    color_discrete_sequence=px.colors.sequential.YlOrBr_r, # Usamos la versión reversa para tonos más oscuros y legibles
+    # Paleta suave y armónica (la misma del tema del dashboard de Power BI)
+    color_discrete_sequence=["#5B7F95", "#C08A5B", "#7FA087", "#B07C8C", "#D3B26B",
+                             "#8D84AE", "#6E9C9E", "#A89F91", "#B59A7A", "#7D8C6A"],
     size_max=35
 )
 
