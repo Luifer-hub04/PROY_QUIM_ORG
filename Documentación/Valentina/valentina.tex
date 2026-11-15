@@ -30,7 +30,6 @@
 La Figura~\ref{fig:heatmap} presenta la matriz de correlación de Spearman entre
 las propiedades fisicoquímicas, y la Figura~\ref{fig:clustermap} agrupa
 jerárquicamente las variables con comportamiento similar.
-\textit{[Interpretación pendiente.]}
 
 \begin{figure}[htbp]
 	\centering
@@ -39,6 +38,18 @@ jerárquicamente las variables con comportamiento similar.
 	\label{fig:heatmap}
 \end{figure}
 
+La Figura~\ref{fig:heatmap} muestra la relación monótona entre las variables del
+estudio mediante el coeficiente de Spearman ($\rho$). Se observa una correlación
+positiva casi perfecta entre el punto de fusión (pf) y la densidad
+($\rho = \num{0.99}$), así como una relación muy fuerte entre el punto de
+ebullición (P.eb) y el pf ($\rho = \num{0.94}$), y entre P.eb y la densidad
+($\rho = \num{0.91}$). Esto refleja que, al aumentar el tamaño o la cohesión
+intermolecular en aminas y amidas, se incrementan simultáneamente los puntos de
+cambio de fase y la masa por unidad de volumen. Por el contrario, la solubilidad
+en agua (S) muestra correlaciones negativas con el P.eb ($\rho = \num{-0.66}$)
+y el momento dipolar ($\rho = \num{-0.49}$), evidenciando que moléculas de mayor
+tamaño o menor polaridad relativa disminuyen su afinidad acuosa.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{02_clustermap_spearman.png}
@@ -46,11 +57,21 @@ jerárquicamente las variables con comportamiento similar.
 	\label{fig:clustermap}
 \end{figure}
 
+Mediante un dendrograma y un mapa de calor ordenado, la Figura~\ref{fig:clustermap}
+agrupa las propiedades fisicoquímicas en clústeres según la similitud de sus
+comportamientos. Se distingue claramente un clúster principal fuertemente acoplado
+compuesto por el punto de fusión (pf), el punto de ebullición (P.eb) y la densidad,
+los cuales comparten patrones macroscópicos regidos por las fuerzas
+intermoleculares. Las variables de comportamiento electrónico o estructural
+interno, como el pKa, el peso molecular (PM) y el momento dipolar, forman un
+clúster separado con relaciones más moderadas entre sí. La solubilidad se ubica
+en un extremo debido a su comportamiento inverso respecto al resto de
+propiedades estáticas.
+
 \subsection{Tendencias entre propiedades}
 % TODO (Valentina): discutir cada regresión en términos de fuerzas intermoleculares.
 Las Figuras~\ref{fig:pf-dens}--\ref{fig:dip-peb} muestran las regresiones
-lineales entre pares de propiedades, con su intervalo de confianza.
-\textit{[Interpretación pendiente.]}
+lineales entre pares de propiedades, con su intervalo de confianza del 95\,\%.
 
 \begin{figure}[htbp]
 	\centering
@@ -59,12 +80,32 @@ lineales entre pares de propiedades, con su intervalo de confianza.
 	\label{fig:pf-dens}
 \end{figure}
 
+La Figura~\ref{fig:pf-dens} describe una tendencia lineal fuertemente positiva
+entre el punto de fusión y la densidad del compuesto, respaldada por un estrecho
+intervalo de confianza del 95\,\%. Esto demuestra que el empaquetamiento
+cristalino más denso en el estado sólido favorece una mayor interacción
+intermolecular, lo que exige una mayor energía térmica para fundir la sustancia.
+Los compuestos representados en los extremos superiores de densidad (cercanos a
+\SI{1.3}{\gram\per\centi\metre\cubed}) presentan puntos de fusión superiores a
+\SI{100}{\degreeCelsius}.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{04_reg_peb_vs_densidad.png}
 	\caption{Punto de ebullición frente a densidad.}
 	\label{fig:peb-dens}
 \end{figure}
+
+La Figura~\ref{fig:peb-dens} representa la regresión lineal entre el punto de
+ebullición (P.eb) y la densidad. Al igual que en la Figura~\ref{fig:pf-dens}, se
+aprecia un incremento progresivo del P.eb a medida que aumenta la densidad. Los
+compuestos en fase líquida a temperatura ambiente con menor densidad exhiben
+puntos de ebullición significativamente más bajos (menores de
+\SI{100}{\degreeCelsius}), mientras que las amidas pesadas o sustituidas que
+superan densidades de \SI{1.1}{\gram\per\centi\metre\cubed} registran
+temperaturas de ebullición elevadas (mayores de \SI{200}{\degreeCelsius}) debido
+al incremento combinado en las fuerzas de Van der Waals y las atracciones
+dipolo--dipolo.
 
 \begin{figure}[htbp]
 	\centering
@@ -73,12 +114,29 @@ lineales entre pares de propiedades, con su intervalo de confianza.
 	\label{fig:pf-peb}
 \end{figure}
 
+La Figura~\ref{fig:pf-peb} correlaciona la energía requerida para pasar de fase
+sólida a líquida (pf) con la necesaria para pasar de líquida a gaseosa (P.eb). La
+tendencia general confirma que las moléculas con enlaces intermoleculares fuertes
+(como amidas primarias con redes extensas de puentes de hidrógeno) demandan altos
+valores de energía en ambas transiciones de fase. Los valores que se desvían de la
+línea central corresponden a especies con asimetría molecular o impedimento
+estérico, donde el empaquetamiento cristalino en el sólido difiere
+significativamente del comportamiento en la fase líquida.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{06_reg_dipolo_vs_peb.png}
 	\caption{Momento dipolar frente a punto de ebullición.}
 	\label{fig:dip-peb}
 \end{figure}
+
+La Figura~\ref{fig:dip-peb} muestra la relación entre la polaridad de la molécula
+(medida en debyes) y el punto de ebullición. A medida que el momento dipolar
+aumenta de aproximadamente 0,5~D hacia 4,5~D, se observa una tendencia positiva
+en el P.eb. Las amidas, al poseer un grupo carbonilo (\ce{C=O}) fuertemente
+polarizado junto al nitrógeno, alcanzan momentos dipolares elevados y
+consecuentemente mayores puntos de ebullición en comparación con las aminas
+alifáticas de baja polaridad \cite{carey2007}.
 
 \subsection{Exploración interactiva con Plotly}
 % TODO (Valentina): interpretar; idea central: a igual PM, los compuestos con
@@ -97,7 +155,6 @@ parecido (31--59~\si{\gram\per\mole}), con momentos menores de 1,4~D, hierven
 por debajo de \SI{40}{\degreeCelsius}. La
 bencidina es la excepción entre las aminas: su punto de ebullición alto se
 debe a su mayor peso molecular y a sus dos grupos \ce{NH2} aromáticos.
-\textit{[Interpretación pendiente.]}
 
 \begin{figure}[htbp]
 	\centering
@@ -106,12 +163,29 @@ debe a su mayor peso molecular y a sus dos grupos \ce{NH2} aromáticos.
 	\label{fig:burbujas}
 \end{figure}
 
+La Figura~\ref{fig:burbujas} evalúa simultáneamente el impacto del peso molecular
+(PM), la capacidad de donar o aceptar puentes de hidrógeno y la densidad sobre el
+punto de ebullición. Compuestos con similar PM, como la trimetilamina
+(\SI{2.8}{\degreeCelsius}) y la N-metiletanamina (\SI{36.5}{\degreeCelsius}),
+muestran diferencias drásticas en P.eb porque sólo la última posee enlaces
+\ce{N-H} que le permiten actuar como donador y aceptor de puentes de hidrógeno
+\cite{wade2017}. Las amidas primarias (como la acetamida) y la bencidina forman
+la agrupación superior por su capacidad donadora/aceptora y su elevado PM.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{12_plotly_pm_dipolo_peb.png}
 	\caption{Peso molecular frente a momento dipolar; el color indica el punto de ebullición y la forma del marcador separa aminas (círculos) de amidas (rombos).}
 	\label{fig:pm-dip}
 \end{figure}
+
+La Figura~\ref{fig:pm-dip} agrupa y clasifica los compuestos según su grupo
+funcional (aminas primarias, secundarias, terciarias, aromáticas y amidas).
+Permite visualizar la clara separación entre familias químicas: las aminas
+alifáticas simples se concentran en zonas de bajo momento dipolar y menor P.eb,
+mientras que las amidas (primarias y secundarias) y las aminas aromáticas migran
+hacia la región superior derecha debido a sus altos momentos dipolares y mayor
+masa molar.
 
 \begin{figure}[htbp]
 	\centering
@@ -120,6 +194,15 @@ debe a su mayor peso molecular y a sus dos grupos \ce{NH2} aromáticos.
 	\label{fig:dens-sol}
 \end{figure}
 
+La Figura~\ref{fig:dens-sol} muestra la solubilidad en agua (\si{\gram\per\litre}
+en escala logarítmica) respecto a la densidad para distintas familias de aminas y
+amidas. Las aminas alifáticas de bajo peso molecular (metilamina, dimetilamina,
+trimetilamina) presentan solubilidades extremas en la zona superior izquierda
+(baja densidad, $\approx$~\SI{1000}{\gram\per\litre}). La urea exhibe una
+solubilidad excepcionalmente alta dada su gran capacidad para formar enlaces de
+hidrógeno. Por otro lado, la bencidina se ubica en el extremo inferior debido a
+sus anillos aromáticos hidrofóbicos, que restringen drásticamente su solubilidad.
+
 \subsection{Distribución por tipo de reacción y medio}
 % TODO (Valentina): explicar qué representa TR y comparar medianas/dispersiones.
 La Figura~\ref{fig:frecuencias} compara la frecuencia de cada mecanismo de
@@ -127,7 +210,6 @@ reacción y de cada medio; la sustitución nucleofílica (SN) domina, coherente 
 el carácter nucleófilo del par libre del nitrógeno. Las
 Figuras~\ref{fig:violin}--\ref{fig:dona} describen la distribución de
 probabilidad de TR según el tipo de reacción y el medio.
-\textit{[Interpretación pendiente.]}
 
 \begin{figure}[htbp]
 	\centering
@@ -136,12 +218,26 @@ probabilidad de TR según el tipo de reacción y el medio.
 	\label{fig:frecuencias}
 \end{figure}
 
+La Figura~\ref{fig:frecuencias} compara las frecuencias observadas para los
+mecanismos de reacción y los medios de reacción extraídos. Domina ampliamente la
+sustitución nucleofílica (SN), lo cual concuerda con el carácter nucleófilo propio
+del par electrónico libre sobre el átomo de nitrógeno en aminas y amidas. En
+cuanto a los medios de reacción, predomina el medio neutro, seguido de
+proporciones menores en medios ácidos, básicos o apolares.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\columnwidth]{07_violin_TR_tipo_medio.png}
 	\caption{Distribución (violín) de TR por tipo de reacción y medio.}
 	\label{fig:violin}
 \end{figure}
+
+La Figura~\ref{fig:violin} representa la densidad de probabilidad del tiempo de
+reacción (TR) o rendimiento según la combinación del tipo de reacción y el medio.
+Permite observar la variabilidad y la dispersión interna de los datos; el medio
+neutro muestra la mayor amplitud de distribución (forma de violín extendida), lo
+que denota una amplia gama de condiciones operativas reportadas para este tipo de
+transformaciones.
 
 \begin{figure}[htbp]
 	\centering
@@ -150,12 +246,26 @@ probabilidad de TR según el tipo de reacción y el medio.
 	\label{fig:boxplot}
 \end{figure}
 
+La Figura~\ref{fig:boxplot} proporciona un resumen estadístico no paramétrico
+(mediana, rango intercuartílico y posibles valores atípicos) del TR para cada
+grupo. Permite comparar de forma directa la estabilidad o reproducibilidad de los
+procesos: las reacciones llevadas a cabo en medios específicos presentan rangos
+intercuartílicos muy estrechos, a diferencia de los medios mixtos o neutros, donde
+los tiempos presentan mayor variación.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\columnwidth]{10_dona_TR_grupo.png}
 	\caption{Participación de TR por grupo (tipo de reacción, medio).}
 	\label{fig:dona}
 \end{figure}
+
+La Figura~\ref{fig:dona} es un gráfico de dona que cuantifica la proporción
+relativa que aporta cada combinación (mecanismo, medio) sobre el total del
+conjunto de datos procesado. Destaca que las agrupaciones asociadas a la
+sustitución nucleofílica en medios neutros y básicos (SN neutro, SN básico)
+constituyen la fracción mayoritaria, evidenciando las rutas sintéticas
+preferenciales empleadas en la literatura para esta familia de compuestos.
 
 % Análisis comparativo de reacciones (aminas vs. amidas), alineado con el dashboard
 \input{Reacciones/reacciones_analisis}
