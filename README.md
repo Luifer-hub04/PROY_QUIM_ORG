@@ -96,6 +96,8 @@ pdflatex main.tex
 | Sara Lozano | Introducción, Marco Teórico, Tabla de datos |
 | Valentina Fraile Gómez | Metodología, Análisis gráfico, Conclusiones |
 | Luisa Gomez | CAS-SciFinder, Power BI, Repositorio |
+| Esteban Reyes | Análisis gráfico, Corrección de la tabla, Power BI |
+| Gabriel Ossa | Análisis gráfico, Corrección de la tabla, Power BI |
 
 ---
 
