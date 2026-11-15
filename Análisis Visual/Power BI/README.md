@@ -19,6 +19,7 @@ Dashboard_Quimica_Organica.Report/         ← reporte: páginas y visuales
 | **4. Aminas** | Basicidad, reacciones clave (alquilación, acilación, amonio cuaternario, ácido nitroso), KPI filtrados a aminas |
 | **5. Amidas** | Resonancia y polaridad, hidrólisis ácida/básica, síntesis desde ácidos carboxílicos |
 | **6. Análisis de reacciones** | KPI de laboratorio (T mediana, % a T ambiente, % con calentamiento, tiempo, catalizador) con segmentadores por familia, medio, mecanismo y catalizador |
+| **7. Gráficas Colab v2** | Versión Power BI de `Notebooks/Graficas_Def_v2.py` con su paleta: burbujas pf vs P.eb (tamaño = densidad), barras por sustancia ordenadas por punto de fusión, tipo de reacción × medio, medio × tipo de reacción y dona del tiempo de reacción (sólo registros con medio reportado). Medida nueva: `Tiempo total (h)` |
 
 Las páginas 4–6 tienen pestañas (Inicio · Aminas · Amidas · Análisis) que usan
 la acción **Navegación de página**.
