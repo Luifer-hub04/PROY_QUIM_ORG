@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Intro_Entrada",
+  "name": "ini_bm_intro_entrada",
+  "options": {
+    "targetVisualNames": [
+      "ini_intro",
+      "ini_btn_ocultar_intro",
+      "ini_btn_ver_intro"
+    ],
+    "applyOnlyToTargetVisuals": true,
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection00inicio",
+    "sections": {
+      "ReportSection00inicio": {
+        "visualContainers": {
+          "ini_intro": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "ini_btn_ocultar_intro": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ini_btn_ver_intro": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

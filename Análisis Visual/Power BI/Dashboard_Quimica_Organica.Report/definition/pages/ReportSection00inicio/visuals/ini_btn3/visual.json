@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ini_btn3",
   "position": {
-    "x": 646,
+    "x": 484,
     "y": 590,
     "z": 2000,
     "height": 56,
-    "width": 200,
+    "width": 150,
     "tabOrder": 9000
   },
   "visual": {
@@ -74,7 +74,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             },

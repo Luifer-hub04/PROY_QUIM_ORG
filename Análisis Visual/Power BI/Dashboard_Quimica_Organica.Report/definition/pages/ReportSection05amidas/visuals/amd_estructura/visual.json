@@ -22,7 +22,7 @@
                     "value": "Estructura y propiedades",
                     "textStyle": {
                       "fontSize": "13pt",
-                      "color": "#D95F02",
+                      "color": "#C08A5B",
                       "fontWeight": "bold"
                     }
                   }
@@ -43,6 +43,17 @@
                 "textRuns": [
                   {
                     "value": "• Momento dipolar alto: 3,7–4,6 D (aminas 0,6–1,4 D).",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Puntos de ebullición elevados: 164–222 °C (aminas alifáticas: −6 a 37 °C).",
                     "textStyle": {
                       "fontSize": "10.5pt",
                       "color": "#2C3E50"

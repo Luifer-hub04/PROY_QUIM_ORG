@@ -1,0 +1,199 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "con_conclusiones",
+  "position": {
+    "x": 640,
+    "y": 85,
+    "z": 1100,
+    "height": 625,
+    "width": 630,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Conclusiones clave",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. La estructura electrónica determina la reactividad y la severidad operativa.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "La deslocalización por resonancia en las amidas estabiliza el enlace C–N y suprime la nucleofilia del nitrógeno. Mientras las aminas reaccionan en condiciones suaves y exigen control estequiométrico para evitar la polialquilación, las amidas requieren catálisis ácida o básica fuerte y alta temperatura para lograr conversiones significativas en la hidrólisis.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. Complementariedad sintética en procesos químicos.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Aminas y amidas operan como un sistema acoplado: la alta reactividad nucleofílica de las aminas permite su acilación eficiente para generar amidas estables, que funcionan como enlaces estructurales resistentes en fármacos y polímeros.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "3. Impacto de Power BI en el análisis experimental.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Los marcadores, paneles desplegables, segmentadores y tarjetas KPI transforman registros estáticos de laboratorio en un sistema interactivo de diagnóstico, que permite relacionar de inmediato las variables experimentales con la reactividad de cada familia.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9DEE5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

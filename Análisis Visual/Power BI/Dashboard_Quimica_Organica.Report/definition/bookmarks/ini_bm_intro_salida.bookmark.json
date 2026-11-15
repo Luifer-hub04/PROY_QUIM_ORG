@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Intro_Salida",
+  "name": "ini_bm_intro_salida",
+  "options": {
+    "targetVisualNames": [
+      "ini_btn_ver_intro",
+      "ini_intro",
+      "ini_btn_ocultar_intro"
+    ],
+    "applyOnlyToTargetVisuals": true,
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection00inicio",
+    "sections": {
+      "ReportSection00inicio": {
+        "visualContainers": {
+          "ini_btn_ver_intro": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ini_intro": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "ini_btn_ocultar_intro": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

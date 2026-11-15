@@ -1,0 +1,208 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "con_proposito",
+  "position": {
+    "x": 10,
+    "y": 85,
+    "z": 1000,
+    "height": 625,
+    "width": 620,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "¿Por qué comparar aminas y amidas?",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Efecto del grupo carbonilo (C=O): las dos familias tienen nitrógeno trivalente, pero en las aminas el par libre está localizado (alta basicidad y nucleofilia), mientras que en las amidas se deslocaliza por resonancia hacia el oxígeno y anula su basicidad.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Salto de estabilidad termodinámica: las aminas reaccionan con electrófilos en condiciones suaves; el enlace C–N de las amidas sólo se hidroliza con catálisis ácida o básica fuerte y calor prolongado.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Relación precursor–producto: las aminas son los nucleófilos que, por acilación, forman las amidas.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "¿Con qué fin se analiza en Power BI?",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Optimizar condiciones experimentales: filtrar por tipo de compuesto, temperatura, medio, mecanismo y catalizador (página 6) para ver qué condiciones favorecen cada reacción y cuáles evitan reacciones secundarias como la polialquilación de las aminas.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Conectar la teoría mecanística con datos reales: los paneles de mecanismos (páginas 4 y 5) conviven con KPI de laboratorio calculados sobre las reacciones registradas en CAS-SciFinder.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#2C3E50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Nota sobre los KPI: CAS-SciFinder no reporta rendimientos, conversiones ni reactivo limitante para estas reacciones. Por eso la reactividad se mide con las condiciones de laboratorio (temperatura, tiempo y uso de catalizador) y no con el rendimiento teórico frente al experimental.",
+                    "textStyle": {
+                      "fontSize": "9.5pt",
+                      "color": "#5A6B7B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9DEE5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

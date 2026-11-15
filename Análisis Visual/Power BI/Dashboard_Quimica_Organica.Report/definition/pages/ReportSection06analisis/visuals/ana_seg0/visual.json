@@ -5,7 +5,7 @@
     "x": 10,
     "y": 120,
     "z": 1600,
-    "height": 110,
+    "height": 130,
     "width": 200,
     "tabOrder": 5000
   },
@@ -23,10 +23,10 @@
                       "Entity": "Compuestos"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Grupo funcional"
                 }
               },
-              "queryRef": "Compuestos.Familia",
+              "queryRef": "Compuestos.Grupo funcional",
               "active": true
             }
           ]
@@ -60,7 +60,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Familia'"
+                  "Value": "'Tipo de compuesto (1°, 2°, 3°)'"
                 }
               }
             }

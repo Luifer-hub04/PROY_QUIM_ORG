@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "con_titulo",
+  "position": {
+    "x": 10,
+    "y": 5,
+    "z": 100,
+    "height": 70,
+    "width": 1100,
+    "tabOrder": 100
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Conclusiones y propósito de la comparación",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#1F3B57",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Por qué se comparan aminas y amidas, con qué fin se construyó el tablero y qué se concluye.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#5A6B7B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

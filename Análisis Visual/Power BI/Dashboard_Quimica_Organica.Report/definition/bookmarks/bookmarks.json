@@ -2,6 +2,14 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
   "items": [
     {
+      "name": "ini_bm_grupo",
+      "displayName": "Inicio",
+      "children": [
+        "ini_bm_intro_entrada",
+        "ini_bm_intro_salida"
+      ]
+    },
+    {
       "name": "ami_bm_grupo",
       "displayName": "Aminas",
       "children": [

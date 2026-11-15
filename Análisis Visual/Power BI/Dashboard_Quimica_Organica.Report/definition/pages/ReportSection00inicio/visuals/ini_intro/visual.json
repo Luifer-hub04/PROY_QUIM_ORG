@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Las aminas y las amidas son los compuestos nitrogenados más usados en la síntesis orgánica. Las aminas (R–NH₂, R₂NH, R₃N) conservan el par de electrones libre del nitrógeno; por eso se comportan como bases y como nucleófilos: atacan haluros de alquilo, cloruros de acilo y grupos carbonilo, y son el punto de partida de fármacos, colorantes y polímeros.",
+                    "value": "Las aminas y las amidas son los compuestos nitrogenados más usados en la síntesis orgánica. Las aminas (R–NH₂, R₂NH, R₃N) conservan el par de electrones libre del nitrógeno; por eso se comportan como bases de Brønsted-Lowry y como nucleófilos: atacan haluros de alquilo, cloruros de acilo y grupos carbonilo, y son el punto de partida de fármacos, colorantes y polímeros.",
                     "textStyle": {
                       "fontSize": "10.5pt",
                       "color": "#2C3E50"
@@ -53,7 +53,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Las amidas (R–CO–NR₂) son derivados de los ácidos carboxílicos. El par libre del nitrógeno entra en resonancia con el grupo carbonilo, lo que las vuelve planas, muy polares y muy estables. Esa estabilidad explica que el enlace amida sostenga a las proteínas y al nailon, y que para formarlo o hidrolizarlo se necesiten calor, ácidos o bases fuertes, o catalizadores.",
+                    "value": "Las amidas (R–CO–NR₂) son derivados de los ácidos carboxílicos. El par libre del nitrógeno entra en resonancia con el grupo carbonilo, lo que las vuelve planas, muy polares y muy estables. Esa estabilidad explica que el enlace amida forme los enlaces peptídicos de las proteínas y polímeros como el nailon, y que para formarlo o hidrolizarlo se necesiten calor, ácidos o bases fuertes, o catalizadores.",
                     "textStyle": {
                       "fontSize": "10.5pt",
                       "color": "#2C3E50"
