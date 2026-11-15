@@ -95,7 +95,7 @@ pdflatex main.tex
 |---|---|
 | Sara [Apellido] | Introducción, Marco Teórico, Tabla de datos |
 | Valentina [Apellido] | Metodología, Análisis gráfico, Conclusiones |
-| [Tercer integrante] | CAS-SciFinder, Power BI, Repositorio |
+| Luisa Gomez | CAS-SciFinder, Power BI, Repositorio |
 
 ---
 
